@@ -1,0 +1,64 @@
+project:
+  name: Bakul B40 Malaysia
+  subtitle: Analisis Beban Harga Makanan Asas Malaysia
+  built_at: "2026-04"
+  focus_location: Tapah, Perak
+  code_license: MIT
+
+data_sources:
+  pricecatcher_catalogue_url: https://data.gov.my/data-catalogue/pricecatcher
+  pricecatcher_url_template: https://storage.data.gov.my/pricecatcher/pricecatcher_{month}.parquet
+  lookup_item_url: https://storage.data.gov.my/pricecatcher/lookup_item.parquet
+  lookup_premise_url: https://storage.data.gov.my/pricecatcher/lookup_premise.parquet
+  cpi_low_income_url: https://open.dosm.gov.my/data-catalogue/cpi_low_income
+  wages_url: https://open.dosm.gov.my
+  access_date: "2026-04-09"
+  data_license: CC BY 4.0
+
+analysis:
+  start_month: "2025-04"
+  end_month: "2026-03"
+  focus_states:
+    - Perak
+    - W.P. Kuala Lumpur
+    - Sabah
+  focus_district: Tapah
+  household_size: 4
+  household_monthly_income_rm: 2100
+  ramadan_months:
+    - "2026-02"
+    - "2026-03"
+
+basket:
+  items:
+    - name: Beras Putih Super Tempatan
+      item_code:
+      quantity: 10
+      quantity_unit: kg
+    - name: Ayam Proses Standard
+      item_code:
+      quantity: 6
+      quantity_unit: kg
+    - name: Telur Ayam Gred A
+      item_code:
+      quantity: 3
+      quantity_unit: dozen
+    - name: Minyak Masak
+      item_code:
+      quantity: 3
+      quantity_unit: kg
+    - name: Gula Putih
+      item_code:
+      quantity: 2
+      quantity_unit: kg
+    - name: Tepung Gandum
+      item_code:
+      quantity: 2
+      quantity_unit: kg
+
+paths:
+  raw_dir: data/raw
+  lookup_dir: data/lookup
+  processed_dir: data/processed
+  figures_dir: report/figures
+  report_pdf: report/Bakul_B40_2026.pdf
