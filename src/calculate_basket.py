@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
+import subprocess
+import sys
 
 import pandas as pd
 import plotly.express as px
@@ -285,7 +288,65 @@ def save_figures(
 
     for figure, destination in figures:
         figure.update_layout(template="plotly_white")
-        figure.write_image(destination, width=1280, height=720, scale=2)
+        export_figure_with_timeout(
+            figure,
+            destination,
+            width=1280,
+            height=720,
+            scale=2,
+        )
+
+
+def export_figure_with_timeout(
+    figure,
+    destination: Path,
+    width: int,
+    height: int,
+    scale: int,
+    timeout_seconds: int = 45,
+) -> None:
+    payload = json.dumps(
+        {
+            "figure_json": figure.to_json(),
+            "destination": str(destination),
+            "width": width,
+            "height": height,
+            "scale": scale,
+        }
+    )
+    script = """
+import json
+import sys
+from pathlib import Path
+
+import plotly.io as pio
+
+payload = json.load(sys.stdin)
+figure = pio.from_json(payload["figure_json"])
+destination = Path(payload["destination"])
+destination.parent.mkdir(parents=True, exist_ok=True)
+figure.write_image(
+    destination,
+    width=payload["width"],
+    height=payload["height"],
+    scale=payload["scale"],
+)
+"""
+
+    try:
+        subprocess.run(
+            [sys.executable, "-c", script],
+            input=payload,
+            text=True,
+            capture_output=True,
+            timeout=timeout_seconds,
+            check=True,
+        )
+    except subprocess.TimeoutExpired:
+        print(f"Warning: skipped figure export after {timeout_seconds}s timeout: {destination.name}")
+    except subprocess.CalledProcessError as error:
+        stderr = error.stderr.strip() if error.stderr else "unknown image export error"
+        print(f"Warning: failed to export {destination.name}: {stderr}")
 
 
 def run_analysis(data_mode: str = "real") -> None:

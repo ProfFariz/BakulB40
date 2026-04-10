@@ -70,12 +70,16 @@ Angka di bawah datang daripada output demo yang dibundel supaya dashboard dan la
 ## Cara Run
 
 ```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-python src/bootstrap_demo.py
-streamlit run dashboard/app.py
+py -3.10 -m pip install -r requirements.txt
+py -3.10 src/bootstrap_demo.py
+py -3.10 -m streamlit run dashboard/app.py
 ```
+
+Nota setup:
+
+- `Python 3.10` ialah versi yang diuji untuk repository ini.
+- Export visual PNG menggunakan Plotly `write_image`, jadi dependency `kaleido` perlu dipasang bersama `requirements.txt`.
+- Repository ini mem-pin `kaleido==0.2.1` supaya export imej tidak bergantung pada pemasangan Chrome tempatan.
 
 Untuk analisis data sebenar:
 
