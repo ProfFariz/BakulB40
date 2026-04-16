@@ -9,13 +9,13 @@ Show the project problem, prove the pipeline is reproducible, and highlight the 
 ### 0s-15s: Problem framing
 
 - Open `readme.md`
-- Say: "This project asks a simple but important question: how much of a B40 household income is spent on six essential food items in Malaysia?"
+- Say: "This project asks a simple but important question: how much of a B40 household income is spent on fifteen essential basket items across three focus states in Malaysia?"
 - Highlight that the project uses KPDN PriceCatcher and not a toy dataset
 
 ### 15s-35s: Pipeline overview
 
 - Open `config.yaml`
-- Explain the 12-month analysis window, focus states, and basket quantities
+- Explain the `2022-01` to `2026-03` analysis window, the three focus states, and the 15 basket quantities
 - Show `src/pipeline.py` and mention there are two modes:
   - `python src/bootstrap_demo.py` for a fast bundled demo
   - `python src/pipeline.py --download` for the full real-data workflow
@@ -35,4 +35,4 @@ Show the project problem, prove the pipeline is reproducible, and highlight the 
 ### 80s-90s: Close
 
 - Show `report/Bakul_B40_2026.pdf`
-- End with: "This repository is built as a reproducible portfolio project: one config file, one pipeline, one dashboard, and a shareable report."
+- End with: "This repository is built as a reproducible portfolio project: one config file, one pipeline, one dashboard, and a shareable report based on real PriceCatcher, CPI, and wage data."

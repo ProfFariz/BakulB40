@@ -4,7 +4,7 @@ Projek ini menukar data harga runcit PriceCatcher kepada satu produk analitik ke
 
 **Berapa besar beban kos bakul makanan asas terhadap isi rumah berpendapatan rendah?**
 
-Versi repo semasa ialah **working prototype yang sudah lebih dekat dengan brief sebenar**. Ia sudah menyokong:
+Versi repo semasa ialah **working real-data version** untuk skop analisis 3 negeri fokus: `Perak`, `W.P. Kuala Lumpur`, dan `Sabah`. Ia sudah menyokong:
 
 - PriceCatcher bulanan
 - lookup item dan lookup premis
@@ -12,7 +12,7 @@ Versi repo semasa ialah **working prototype yang sudah lebih dekat dengan brief 
 - gaji median bulanan pekerja mengikut negeri sebagai rujukan pendapatan
 - dashboard, output processed, dan laporan PDF
 
-Dokumen aliran projek yang lebih visual ada di [docs/project_overview.md](docs/project_overview.md).
+Dokumen aliran projek yang lebih visual ada di [docs/project_overview.md](docs/project_overview.md), manakala nota serahan ringkas ada di [docs/submission_notes.md](docs/submission_notes.md).
 
 ## Apa Yang Projek Ini Buat
 
@@ -121,6 +121,7 @@ Simpan fail mentah di lokasi ini:
 - `household_income_rm` datang daripada **gaji median bulanan pekerja mengikut negeri**.
 - Jika bulan analisis melebihi tahun gaji rasmi terkini, projek ini akan carry forward tahun rasmi terakhir yang tersedia.
 - `CPI Low-Income` digunakan sebagai **benchmark konteks inflasi**, bukan sebagai denominator untuk `burden_pct`.
+- Skop analisis basket dalam repo ini ialah **3 negeri fokus sahaja**: `Perak`, `W.P. Kuala Lumpur`, dan `Sabah`.
 - `Beras putih` kini menggunakan **state-specific proxy** dalam `config.yaml` kerana satu kod beras 10kg tunggal tidak memberi liputan yang stabil untuk Perak, W.P. Kuala Lumpur, dan Sabah secara serentak.
 - Beberapa item generik seperti `beras putih`, `kicap`, `mee segera`, dan `sabun` dipetakan kepada satu item PriceCatcher yang mewakili kategori tersebut. Pemetaan tepat ini disimpan dalam `config.yaml`.
 - Klasifikasi `Urban/Rural` masih menggunakan heuristik berdasarkan metadata premis.
@@ -166,6 +167,16 @@ Setakat `2026-04-16`, rujukan gaji rasmi yang digunakan dalam repo ini datang da
 - Sesetengah item adalah **proxy item** kerana PriceCatcher menyimpan item pada tahap produk/jenama, bukan label generik sepenuhnya.
 - Export PNG menggunakan Plotly + Kaleido boleh gagal dalam sesetengah sandbox environment, tetapi repo ini kini akan fallback kepada `matplotlib` untuk figure report apabila perlu.
 - Siri gaji median negeri datang daripada keluaran rasmi tahunan. Untuk bulan analisis yang melebihi tahun rasmi terkini, nilai tahun terakhir yang tersedia akan dibawa ke hadapan.
+
+## Final Submission Files
+
+Untuk serahan, fail paling penting ialah:
+
+- `readme.md`
+- `docs/project_overview.md`
+- `docs/submission_notes.md`
+- `report/Bakul_B40_2026.pdf`
+- `data/processed/` outputs yang terhasil daripada pipeline sebenar
 
 ## Lesen
 

@@ -44,7 +44,7 @@ def build_story() -> list:
 
     story = [
         Paragraph(config["project"]["subtitle"], styles["Title"]),
-        Paragraph("Laporan ringkas 3 muka surat untuk portfolio data analyst.", styles["BodySmall"]),
+        Paragraph("Laporan ringkas untuk portfolio data analyst.", styles["BodySmall"]),
         Spacer(1, 0.4 * cm),
         Paragraph("Soalan utama", styles["Heading2"]),
         Paragraph(

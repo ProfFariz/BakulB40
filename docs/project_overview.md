@@ -96,9 +96,9 @@ flowchart TD
 - `dashboard/`: presentation layer for Streamlit
 - `docs/`: supporting project documentation
 
-## Current Project State And Remaining Work
+## Current Project State
 
-This is the simplest way to see what is already implemented and what still needs final polish.
+This is the simplest way to see what is already implemented in the final scoped version of the project.
 
 ```mermaid
 flowchart LR
@@ -108,14 +108,8 @@ flowchart LR
   A --> A4["15 basket items configured"]
   A --> A5["2022-01 to 2026-03 configured"]
   A --> A6["State wage reference + CPI benchmark"]
-
-  B["Remaining Polish"] --> B1["Proxy-item review"]
-  B --> B2["Final wording cleanup"]
-  B --> B3["Optional supervisor-specific tweaks"]
-  B --> B4["Submission packaging"]
-
-  A --> C["Next focus"]
-  C --> B
+  A --> A7["3 focus states"]
+  A --> A8["State-specific rice proxy where needed"]
 ```
 
 ## Main Project Flow
@@ -168,8 +162,6 @@ It is more like:
 
 Current repo = **working real-data version with demo bootstrap**
 
-Remaining work = **submission polish and any supervisor-driven refinement**
-
 So the current repo already gives:
 
 - a working structure
@@ -177,7 +169,7 @@ So the current repo already gives:
 - a working report flow
 - a place to continue building
 
-What is still worth doing next:
+What remains after this is mostly presentation-side work:
 
-- review whether each proxy item is the best representative product for the brief
-- tighten wording, screenshots, and packaging for final submission
+- final local review before submission
+- optional supervisor-driven refinement if a different proxy product is preferred
