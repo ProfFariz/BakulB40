@@ -72,8 +72,42 @@ def month_range(config: dict[str, Any]) -> list[str]:
     return months.strftime("%Y-%m").tolist()
 
 
+def raw_month_paths(config: dict[str, Any]) -> list[Path]:
+    paths = get_paths(config)
+    return [paths["raw_dir"] / f"pricecatcher_{month}.parquet" for month in month_range(config)]
+
+
 def basket_items(config: dict[str, Any]) -> list[dict[str, Any]]:
     return config["basket"]["items"]
+
+
+def basket_proxy_rows(config: dict[str, Any]) -> list[dict[str, Any]]:
+    focus_states = [str(state) for state in config["analysis"].get("focus_states", [])]
+    rows: list[dict[str, Any]] = []
+    for item in basket_items(config):
+        state_proxies = item.get("state_proxies") or {}
+        if state_proxies:
+            for state, proxy in state_proxies.items():
+                rows.append(
+                    {
+                        "name": str(item["name"]),
+                        "state": str(state),
+                        "lookup_name": str(proxy.get("lookup_name") or item.get("lookup_name") or item["name"]),
+                        "item_code": str(proxy["item_code"]) if proxy.get("item_code") is not None else None,
+                    }
+                )
+            continue
+
+        for state in focus_states:
+            rows.append(
+                {
+                    "name": str(item["name"]),
+                    "state": state,
+                    "lookup_name": str(item.get("lookup_name") or item["name"]),
+                    "item_code": str(item["item_code"]) if item.get("item_code") is not None else None,
+                }
+            )
+    return rows
 
 
 def basket_item_names(config: dict[str, Any]) -> list[str]:
@@ -81,14 +115,11 @@ def basket_item_names(config: dict[str, Any]) -> list[str]:
 
 
 def basket_lookup_names(config: dict[str, Any]) -> list[str]:
-    return [str(item.get("lookup_name") or item["name"]) for item in basket_items(config)]
+    return [row["lookup_name"] for row in basket_proxy_rows(config)]
 
 
 def basket_lookup_map(config: dict[str, Any]) -> dict[str, str]:
-    return {
-        str(item.get("lookup_name") or item["name"]): str(item["name"])
-        for item in basket_items(config)
-    }
+    return {row["lookup_name"]: row["name"] for row in basket_proxy_rows(config)}
 
 
 def basket_quantities(config: dict[str, Any]) -> dict[str, float]:

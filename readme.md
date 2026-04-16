@@ -121,6 +121,7 @@ Simpan fail mentah di lokasi ini:
 - `household_income_rm` datang daripada **gaji median bulanan pekerja mengikut negeri**.
 - Jika bulan analisis melebihi tahun gaji rasmi terkini, projek ini akan carry forward tahun rasmi terakhir yang tersedia.
 - `CPI Low-Income` digunakan sebagai **benchmark konteks inflasi**, bukan sebagai denominator untuk `burden_pct`.
+- `Beras putih` kini menggunakan **state-specific proxy** dalam `config.yaml` kerana satu kod beras 10kg tunggal tidak memberi liputan yang stabil untuk Perak, W.P. Kuala Lumpur, dan Sabah secara serentak.
 - Beberapa item generik seperti `beras putih`, `kicap`, `mee segera`, dan `sabun` dipetakan kepada satu item PriceCatcher yang mewakili kategori tersebut. Pemetaan tepat ini disimpan dalam `config.yaml`.
 - Klasifikasi `Urban/Rural` masih menggunakan heuristik berdasarkan metadata premis.
 
@@ -138,6 +139,8 @@ Fast first run dengan demo data:
 py -3.10 src/bootstrap_demo.py
 py -3.10 -m streamlit run dashboard/app.py
 ```
+
+Menjalankan pipeline penuh selepas itu akan menggantikan output demo dalam `data/processed/` dengan output data sebenar.
 
 Pipeline data sebenar:
 
@@ -160,10 +163,9 @@ Setakat `2026-04-16`, rujukan gaji rasmi yang digunakan dalam repo ini datang da
 
 ## Limitasi Semasa
 
-- Walaupun config kini sudah diset kepada `2022-01` hingga `2026-03` dan 15 item, output yang dibundel dalam repo masih mode demo sehingga pipeline data sebenar dijalankan.
 - Sesetengah item adalah **proxy item** kerana PriceCatcher menyimpan item pada tahap produk/jenama, bukan label generik sepenuhnya.
-- Export PNG menggunakan Plotly + Kaleido boleh gagal dalam sesetengah sandbox environment, walaupun CSV, dashboard, dan PDF masih boleh dijana.
-- Dashboard dibundel dengan mode demo untuk memudahkan semakan pertama.
+- Export PNG menggunakan Plotly + Kaleido boleh gagal dalam sesetengah sandbox environment, tetapi repo ini kini akan fallback kepada `matplotlib` untuk figure report apabila perlu.
+- Siri gaji median negeri datang daripada keluaran rasmi tahunan. Untuk bulan analisis yang melebihi tahun rasmi terkini, nilai tahun terakhir yang tersedia akan dibawa ke hadapan.
 
 ## Lesen
 

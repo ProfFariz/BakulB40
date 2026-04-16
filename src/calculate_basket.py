@@ -9,6 +9,14 @@ import sys
 import pandas as pd
 import plotly.express as px
 
+try:
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+except Exception:  # pragma: no cover - fallback import is environment dependent
+    plt = None
+
 from common import (
     basket_quantities,
     ensure_directories,
@@ -336,6 +344,7 @@ def build_kpis(
         "latest_focus_district": focus_district,
         "latest_focus_cost_rm": round(latest_focus_cost, 2),
         "latest_focus_burden_pct": round(latest_focus_burden, 2),
+        "focus_district_series_change_pct": focus_change,
         "focus_district_12m_change_pct": focus_change,
         "latest_focus_state": latest_focus_state,
         "reference_income_rm": round(reference_income_rm, 2),
@@ -449,6 +458,7 @@ def save_figures(
 
     figures = [
         (
+            "monthly_basket",
             px.line(
                 total_basket,
                 x="bulan",
@@ -460,6 +470,7 @@ def save_figures(
             figures_dir / "01_kos_bakul_bulanan.png",
         ),
         (
+            "state_burden",
             px.bar(
                 total_basket[total_basket["bulan"] == total_basket["bulan"].max()]
                 .groupby("state", dropna=False)["burden_pct"]
@@ -473,6 +484,7 @@ def save_figures(
             figures_dir / "02_beban_gaji_negeri.png",
         ),
         (
+            "inflation_item",
             px.line(
                 inflation,
                 x="bulan",
@@ -484,6 +496,7 @@ def save_figures(
             figures_dir / "03_inflasi_item.png",
         ),
         (
+            "urban_rural_gap",
             px.bar(
                 gap,
                 x="bulan",
@@ -495,6 +508,7 @@ def save_figures(
             figures_dir / "04_jurang_bandar_luar_bandar.png",
         ),
         (
+            "ramadan",
             px.bar(
                 ramadan,
                 x="ramadan_flag",
@@ -509,6 +523,7 @@ def save_figures(
     if not basket_vs_cpi.empty and basket_vs_cpi["low_income_cpi_rebased"].notna().any():
         figures.append(
             (
+                "basket_vs_cpi",
                 px.line(
                     basket_vs_cpi.melt(
                         id_vars="bulan",
@@ -526,15 +541,26 @@ def save_figures(
             )
         )
 
-    for figure, destination in figures:
+    for chart_key, figure, destination in figures:
         figure.update_layout(template="plotly_white")
-        export_figure_with_timeout(
+        exported = export_figure_with_timeout(
             figure,
             destination,
             width=1280,
             height=720,
             scale=2,
         )
+        if not exported:
+            export_matplotlib_fallback(
+                chart_key,
+                destination,
+                item_monthly=item_monthly,
+                total_basket=total_basket,
+                inflation=inflation,
+                basket_vs_cpi=basket_vs_cpi,
+                gap=gap,
+                ramadan=ramadan,
+            )
 
 
 def export_figure_with_timeout(
@@ -544,7 +570,7 @@ def export_figure_with_timeout(
     height: int,
     scale: int,
     timeout_seconds: int = 45,
-) -> None:
+) -> bool:
     payload = json.dumps(
         {
             "figure_json": figure.to_json(),
@@ -582,11 +608,97 @@ figure.write_image(
             timeout=timeout_seconds,
             check=True,
         )
+        return True
     except subprocess.TimeoutExpired:
         print(f"Warning: skipped figure export after {timeout_seconds}s timeout: {destination.name}")
     except subprocess.CalledProcessError as error:
         stderr = error.stderr.strip() if error.stderr else "unknown image export error"
         print(f"Warning: failed to export {destination.name}: {stderr}")
+    return False
+
+
+def export_matplotlib_fallback(
+    chart_key: str,
+    destination: Path,
+    *,
+    item_monthly: pd.DataFrame,
+    total_basket: pd.DataFrame,
+    inflation: pd.DataFrame,
+    basket_vs_cpi: pd.DataFrame,
+    gap: pd.DataFrame,
+    ramadan: pd.DataFrame,
+) -> None:
+    if plt is None:
+        print(f"Warning: matplotlib fallback unavailable for {destination.name}")
+        return
+
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    fig, ax = plt.subplots(figsize=(12.8, 7.2), dpi=100)
+
+    if chart_key == "monthly_basket":
+        data = (
+            total_basket.groupby(["bulan", "district"], dropna=False)["cost_item"]
+            .mean()
+            .reset_index()
+        )
+        for district, group in data.groupby("district", dropna=False):
+            ax.plot(group["bulan"], group["cost_item"], marker="o", linewidth=1.5, label=str(district))
+        ax.set_title("Kos Bakul Bulanan Mengikut Daerah")
+        ax.set_ylabel("RM")
+        ax.legend(loc="upper left", fontsize=8, ncol=2)
+    elif chart_key == "state_burden":
+        data = (
+            total_basket[total_basket["bulan"] == total_basket["bulan"].max()]
+            .groupby("state", dropna=False)["burden_pct"]
+            .mean()
+            .reset_index()
+            .sort_values("burden_pct", ascending=False)
+        )
+        ax.bar(data["state"], data["burden_pct"], color="#2563eb")
+        ax.set_title("Beban Gaji Bulan Terkini Mengikut Negeri")
+        ax.set_ylabel("%")
+    elif chart_key == "inflation_item":
+        for item, group in inflation.groupby("item", dropna=False):
+            ax.plot(group["bulan"], group["price_index"], marker="o", linewidth=1.5, label=str(item))
+        ax.set_title("Indeks Harga Item Asas")
+        ax.set_ylabel("Index")
+        ax.legend(loc="upper left", fontsize=8, ncol=2)
+    elif chart_key == "urban_rural_gap":
+        pivot = gap.pivot(index="bulan", columns="area_type", values="avg_cost").fillna(0)
+        positions = range(len(pivot.index))
+        width = 0.38
+        ax.bar([pos - width / 2 for pos in positions], pivot.get("Urban", pd.Series(index=pivot.index, data=0)), width=width, label="Urban", color="#0f766e")
+        ax.bar([pos + width / 2 for pos in positions], pivot.get("Rural", pd.Series(index=pivot.index, data=0)), width=width, label="Rural", color="#f59e0b")
+        ax.set_xticks(list(positions))
+        ax.set_xticklabels(pivot.index.tolist(), rotation=45, ha="right")
+        ax.set_title("Jurang Kos Bakul Bandar-Luar Bandar")
+        ax.set_ylabel("RM")
+        ax.legend()
+    elif chart_key == "ramadan":
+        ax.bar(ramadan["ramadan_flag"], ramadan["avg_cost"], color=["#7c3aed", "#94a3b8"][: len(ramadan)])
+        ax.set_title("Purata Kos Bakul Ramadan vs Bukan Ramadan")
+        ax.set_ylabel("RM")
+    elif chart_key == "basket_vs_cpi":
+        data = basket_vs_cpi.dropna(subset=["low_income_cpi_rebased"]).copy()
+        ax.plot(data["bulan"], data["basket_index"], marker="o", linewidth=1.5, label="basket_index")
+        ax.plot(data["bulan"], data["low_income_cpi_rebased"], marker="o", linewidth=1.5, label="low_income_cpi_rebased")
+        ax.set_title("Indeks Bakul vs CPI Low-Income (Rebase=100)")
+        ax.set_ylabel("Index")
+        ax.legend()
+    else:
+        plt.close(fig)
+        print(f"Warning: no matplotlib fallback registered for {destination.name}")
+        return
+
+    ax.grid(True, axis="y", alpha=0.25)
+    if chart_key not in {"urban_rural_gap"}:
+        for label in ax.get_xticklabels():
+            label.set_rotation(45)
+            label.set_ha("right")
+    fig.tight_layout()
+    fig.savefig(destination, format="png", bbox_inches="tight")
+    plt.close(fig)
+    print(f"Saved matplotlib fallback {destination.name}")
 
 
 def run_analysis(data_mode: str = "real") -> None:
@@ -622,6 +734,11 @@ def run_analysis(data_mode: str = "real") -> None:
 
     source_metadata = read_json(paths["source_json"], default={})
     source_metadata["data_mode"] = data_mode
+    source_metadata["note"] = (
+        "Generated from the full configured PriceCatcher month range."
+        if data_mode == "real"
+        else "Bundled demo snapshot for a fast first run. Replace by running the full PriceCatcher pipeline."
+    )
     source_metadata["cpi_low_income_available"] = not cpi_low_income.empty
     source_metadata["wages_reference_available"] = not wages.empty
     write_json(paths["source_json"], source_metadata)

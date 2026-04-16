@@ -3,16 +3,10 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+import duckdb
 import pandas as pd
 
-from common import (
-    basket_lookup_map,
-    ensure_directories,
-    get_paths,
-    load_config,
-    month_range,
-    save_config,
-)
+from common import ensure_directories, get_paths, load_config, month_range, save_config
 
 
 def download_month(month: str, url_template: str, destination: Path, force: bool) -> pd.DataFrame:
@@ -41,32 +35,70 @@ def download_lookup(url: str, destination: Path, force: bool) -> pd.DataFrame:
 
 
 def update_item_codes(config: dict, item_lookup: pd.DataFrame) -> None:
-    lookup_map = basket_lookup_map(config)
-    matched = item_lookup[item_lookup["item"].isin(lookup_map.keys())].copy()
-    matched = matched.sort_values(["item", "item_code"]).drop_duplicates("item")
-
+    matched = item_lookup.sort_values(["item", "item_code"]).drop_duplicates("item")
     code_by_name = dict(zip(matched["item"], matched["item_code"]))
+    catalogue_rows: list[dict[str, object]] = []
+    unresolved: list[str] = []
+
     for item in config["basket"]["items"]:
+        state_proxies = item.get("state_proxies") or {}
+        if state_proxies:
+            for state, proxy in state_proxies.items():
+                lookup_name = str(proxy.get("lookup_name") or item.get("lookup_name") or item["name"])
+                discovered = code_by_name.get(lookup_name)
+                if discovered is not None:
+                    proxy["item_code"] = str(discovered)
+                else:
+                    unresolved.append(f"{item['name']} [{state}]")
+                catalogue_rows.append(
+                    {
+                        "basket_item_name": item["name"],
+                        "state": state,
+                        "lookup_name": lookup_name,
+                        "item_code": proxy.get("item_code"),
+                    }
+                )
+            continue
+
         lookup_name = str(item.get("lookup_name") or item["name"])
         discovered = code_by_name.get(lookup_name)
         if discovered is not None:
             item["item_code"] = str(discovered)
+        else:
+            unresolved.append(str(item["name"]))
+        catalogue_rows.append(
+            {
+                "basket_item_name": item["name"],
+                "state": "ALL_FOCUS_STATES",
+                "lookup_name": lookup_name,
+                "item_code": item.get("item_code"),
+            }
+        )
 
     save_config(config)
-    matched["basket_item_name"] = matched["item"].map(lookup_map)
-    matched[["basket_item_name", "item", "item_code"]].to_csv(
-        get_paths(config)["item_catalogue_csv"],
-        index=False,
-    )
-    unresolved = [display_name for lookup_name, display_name in lookup_map.items() if lookup_name not in code_by_name]
+    pd.DataFrame(catalogue_rows).to_csv(get_paths(config)["item_catalogue_csv"], index=False)
     if unresolved:
         print(f"Warning: item codes not found for {', '.join(unresolved)}")
 
 
-def build_combined_raw(month_frames: list[pd.DataFrame], destination: Path) -> None:
-    combined = pd.concat(month_frames, ignore_index=True)
-    combined.to_parquet(destination, index=False)
-    print(f"Saved {destination.name} with {len(combined):,} rows")
+def build_combined_raw(month_files: list[Path], destination: Path) -> None:
+    if not month_files:
+        return
+
+    parquet_list = ", ".join(f"'{path.as_posix()}'" for path in month_files)
+    connection = duckdb.connect()
+    query = f"""
+        COPY (
+            SELECT
+                CAST(date AS DATE) AS date,
+                COALESCE(bulan, strftime(CAST(date AS DATE), '%Y-%m')) AS bulan,
+                *
+            EXCLUDE (date, bulan)
+            FROM read_parquet([{parquet_list}])
+        ) TO '{destination.as_posix()}' (FORMAT PARQUET);
+    """
+    connection.execute(query)
+    print(f"Saved {destination.name}")
 
 
 def main() -> None:
@@ -87,12 +119,16 @@ def main() -> None:
     months = month_range(config)
     url_template = config["data_sources"]["pricecatcher_url_template"]
 
-    month_frames = []
+    month_files = []
     for month in months:
         destination = paths["raw_dir"] / f"pricecatcher_{month}.parquet"
-        month_frames.append(download_month(month, url_template, destination, args.force))
+        download_month(month, url_template, destination, args.force)
+        month_files.append(destination)
 
-    build_combined_raw(month_frames, paths["raw_combined"])
+    try:
+        build_combined_raw(month_files, paths["raw_combined"])
+    except Exception as error:
+        print(f"Warning: skipped combined parquet snapshot because of: {error}")
 
     lookup_item = download_lookup(
         config["data_sources"]["lookup_item_url"],

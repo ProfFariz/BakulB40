@@ -4,43 +4,68 @@ import pandas as pd
 import duckdb
 
 from common import (
-    basket_lookup_map,
+    basket_proxy_rows,
     classify_area_type,
     ensure_directories,
     get_paths,
     load_config,
     quoted_sql_strings,
+    raw_month_paths,
 )
 
 
+def normalize_code(series: pd.Series) -> pd.Series:
+    numeric = pd.to_numeric(series, errors="coerce")
+    normalized = series.astype(str).str.strip()
+    normalized = normalized.mask(numeric.notna(), numeric.dropna().astype("Int64").astype(str))
+    return normalized
+
+
 def resolve_selected_items(config: dict, item_lookup: pd.DataFrame) -> pd.DataFrame:
-    lookup_map = basket_lookup_map(config)
-    display_name_by_code = {
-        str(item["item_code"]): str(item["name"])
-        for item in config["basket"]["items"]
-        if item.get("item_code")
-    }
-    configured_codes = [item.get("item_code") for item in config["basket"]["items"] if item.get("item_code")]
+    lookup = item_lookup.copy()
+    lookup["item_code"] = normalize_code(lookup["item_code"])
 
-    selected = item_lookup[item_lookup["item"].isin(lookup_map.keys())].copy()
-    if configured_codes:
-        selected = item_lookup[item_lookup["item_code"].astype(str).isin(configured_codes)].copy()
+    resolved_rows: list[dict[str, object]] = []
+    unresolved: list[str] = []
 
+    for proxy in basket_proxy_rows(config):
+        match = pd.DataFrame()
+        item_code = proxy.get("item_code")
+        lookup_name = str(proxy["lookup_name"])
+        if item_code:
+            match = lookup[lookup["item_code"] == str(item_code)].copy()
+        if match.empty:
+            match = lookup[lookup["item"] == lookup_name].copy()
+        if match.empty:
+            unresolved.append(f"{proxy['name']} [{proxy['state']}] -> {lookup_name}")
+            continue
+
+        row = match.sort_values("item_code").iloc[0]
+        resolved_rows.append(
+            {
+                "state": str(proxy["state"]),
+                "item_code": str(row["item_code"]),
+                "item": str(proxy["name"]),
+                "unit": row.get("unit"),
+                "item_group": row.get("item_group"),
+            }
+        )
+
+    if unresolved:
+        raise ValueError("No matching basket items found for: " + "; ".join(unresolved))
+
+    selected = pd.DataFrame(resolved_rows)
     if selected.empty:
         raise ValueError("No matching basket items found in lookup_item.parquet.")
 
-    selected["item"] = (
-        selected["item_code"].astype(str).map(display_name_by_code)
-        .fillna(selected["item"].map(lookup_map))
-        .fillna(selected["item"])
-    )
-    columns = [column for column in ("item_code", "item", "unit", "item_group") if column in selected.columns]
-    return selected[columns].drop_duplicates("item_code")
+    columns = [column for column in ("state", "item_code", "item", "unit", "item_group") if column in selected.columns]
+    return selected[columns].drop_duplicates(["state", "item_code"])
 
 
-def filter_price_data(raw_parquet: str, item_codes: list[str]) -> pd.DataFrame:
+def filter_price_data(raw_parquets: list[str], item_codes: list[str]) -> pd.DataFrame:
     connection = duckdb.connect()
     code_list = quoted_sql_strings(item_codes)
+    parquet_list = ", ".join(f"'{path}'" for path in raw_parquets)
     query = f"""
         SELECT
             CAST(date AS DATE) AS date,
@@ -48,7 +73,7 @@ def filter_price_data(raw_parquet: str, item_codes: list[str]) -> pd.DataFrame:
             CAST(item_code AS VARCHAR) AS item_code,
             CAST(premise_code AS VARCHAR) AS premise_code,
             CAST(price AS DOUBLE) AS price
-        FROM read_parquet('{raw_parquet}')
+        FROM read_parquet([{parquet_list}])
         WHERE CAST(item_code AS VARCHAR) IN ({code_list})
           AND price > 0
           AND price < 100
@@ -71,6 +96,8 @@ def enrich_premise_columns(premise_lookup: pd.DataFrame) -> pd.DataFrame:
     }
     available = {key: value for key, value in rename_candidates.items() if key in frame.columns}
     frame = frame.rename(columns=available)
+    if "premise_code" in frame.columns:
+        frame["premise_code"] = normalize_code(frame["premise_code"])
     return frame
 
 
@@ -85,11 +112,14 @@ def main() -> None:
 
     selected_items = resolve_selected_items(config, item_lookup)
     item_codes = selected_items["item_code"].astype(str).tolist()
-    price = filter_price_data(paths["raw_combined"].as_posix(), item_codes)
+    month_files = [path.as_posix() for path in raw_month_paths(config) if path.exists()]
+    if not month_files:
+        raise FileNotFoundError("No monthly PriceCatcher parquet files found in data/raw. Run download_data.py first.")
+    price = filter_price_data(month_files, item_codes)
 
-    clean = price.merge(selected_items, on="item_code", how="left")
-    clean = clean.merge(premise_lookup, on="premise_code", how="left")
+    clean = price.merge(premise_lookup, on="premise_code", how="left")
     clean = clean[clean["state"].isin(config["analysis"]["focus_states"])].copy()
+    clean = clean.merge(selected_items, on=["state", "item_code"], how="inner")
 
     clean["area_type"] = clean.apply(lambda row: classify_area_type(row.to_dict()), axis=1)
     clean["price"] = clean["price"].round(4)

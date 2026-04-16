@@ -39,6 +39,8 @@ def build_story() -> list:
     styles = build_styles()
     kpis = read_json(paths["kpi_json"], default={})
     insights = read_json(paths["insights_json"], default=[])
+    focus_district = str(kpis.get("latest_focus_district") or config["analysis"]["focus_district"])
+    focus_change = kpis.get("focus_district_series_change_pct", kpis.get("focus_district_12m_change_pct", 0))
 
     story = [
         Paragraph(config["project"]["subtitle"], styles["Title"]),
@@ -57,7 +59,7 @@ def build_story() -> list:
         [
             ["Metrik", "Nilai"],
             ["Bulan terkini", str(kpis.get("latest_month", "N/A"))],
-            ["Kos bakul Tapah", f"RM{kpis.get('latest_focus_cost_rm', 0):.2f}"],
+            [f"Kos bakul {focus_district}", f"RM{kpis.get('latest_focus_cost_rm', 0):.2f}"],
             ["Beban pendapatan", f"{kpis.get('latest_focus_burden_pct', 0):.2f}%"],
             [
                 "Pendapatan rujukan negeri",
@@ -72,7 +74,7 @@ def build_story() -> list:
                     else "N/A"
                 ),
             ],
-            ["Perubahan 12 bulan", f"{kpis.get('focus_district_12m_change_pct', 0):.2f}%"],
+            ["Perubahan sejak mula", f"{focus_change:.2f}%"],
             ["Negeri paling tertekan", str(kpis.get("highest_pressure_state", "N/A"))],
         ],
         colWidths=[6.5 * cm, 8.5 * cm],
@@ -139,9 +141,12 @@ def build_story() -> list:
                 "Klasifikasi bandar-luar bandar menggunakan heuristik metadata premis, "
                 "manakala analisis beban pendapatan menggunakan gaji median bulanan pekerja mengikut negeri "
                 "sebagai proksi rujukan, dengan carry-forward pada tahun rasmi terkini yang tersedia jika perlu. "
+                "Untuk beras putih, proksi item ditetapkan secara khusus mengikut negeri fokus kerana tiada satu kod "
+                "beras 10kg yang mempunyai liputan stabil merentas ketiga-tiga negeri. "
                 "CPI Low-Income digunakan sebagai benchmark konteks, bukan sebagai denominator beban pendapatan. "
-                "Output demo dibundel untuk memudahkan semakan awal, dan boleh diganti "
-                "sepenuhnya dengan output data sebenar selepas pipeline penuh dijalankan.",
+                "Sesetengah item bakul masih merupakan proxy item berdasarkan padanan produk yang paling hampir dalam "
+                "PriceCatcher, jadi pemetaan ini boleh diperhalusi lagi jika pensyarah atau penyelia meminta pilihan "
+                "wakil produk yang berbeza.",
                 styles["BodySmall"],
             ),
         ]

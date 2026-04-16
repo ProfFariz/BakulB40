@@ -9,10 +9,10 @@
   <rect x="354" y="164" width="260" height="72" rx="16" fill="#e2e8f0"/>
   <rect x="644" y="164" width="260" height="72" rx="16" fill="#e2e8f0"/>
   <rect x="934" y="164" width="260" height="72" rx="16" fill="#e2e8f0"/>
-  <text x="86" y="195" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">Kos Bakul Tapah</text>
-  <text x="86" y="222" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="28" font-weight="700">RM 177.72</text>
-  <text x="376" y="195" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">Perubahan 12 Bulan</text>
-  <text x="376" y="222" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="28" font-weight="700">13.9%</text>
+  <text x="86" y="195" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">Kos Bakul Batang Padang</text>
+  <text x="86" y="222" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="28" font-weight="700">RM 148.57</text>
+  <text x="376" y="195" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">Perubahan Sejak Mula</text>
+  <text x="376" y="222" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="28" font-weight="700">-24.6%</text>
   <text x="666" y="195" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">Beban Pendapatan</text>
   <text x="666" y="222" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="28" font-weight="700">8.46%</text>
   <text x="956" y="195" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">Negeri Paling Tertekan</text>
@@ -37,7 +37,7 @@
   <text x="1068" y="476" fill="#334155" font-family="Arial, sans-serif" font-size="16">Sabah</text>
 
   <text x="848" y="534" fill="#0f172a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Insight Ringkas</text>
-  <text x="848" y="572" fill="#334155" font-family="Arial, sans-serif" font-size="18">- Tapah mengambil 8.46% gaji rujukan</text>
+  <text x="848" y="572" fill="#334155" font-family="Arial, sans-serif" font-size="18">- Batang Padang mengambil 7.25% gaji rujukan</text>
   <text x="848" y="606" fill="#334155" font-family="Arial, sans-serif" font-size="18">- Sabah paling tertekan dalam snapshot</text>
   <text x="848" y="640" fill="#334155" font-family="Arial, sans-serif" font-size="18">- Ramadan menaikkan purata kos bakul</text>
 </svg>

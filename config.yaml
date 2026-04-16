@@ -1,10 +1,9 @@
 project:
   name: Bakul B40 Malaysia
   subtitle: Analisis Beban Harga Makanan Asas Malaysia
-  built_at: "2026-04"
-  focus_location: Tapah, Perak
+  built_at: 2026-04
+  focus_location: Batang Padang, Perak
   code_license: MIT
-
 data_sources:
   pricecatcher_catalogue_url: https://data.gov.my/data-catalogue/pricecatcher
   pricecatcher_url_template: https://storage.data.gov.my/pricecatcher/pricecatcher_{month}.parquet
@@ -13,109 +12,114 @@ data_sources:
   cpi_low_income_url: https://open.dosm.gov.my/data-catalogue/cpi_lowincome
   cpi_low_income_parquet_url: https://storage.dosm.gov.my/cpi/cpi_2d_lowincome.parquet
   wages_url: https://open.dosm.gov.my
-  access_date: "2026-04-16"
+  access_date: '2026-04-16'
   data_license: CC BY 4.0
-
 analysis:
-  start_month: "2022-01"
-  end_month: "2026-03"
+  start_month: 2022-01
+  end_month: 2026-03
   focus_states:
-    - Perak
-    - W.P. Kuala Lumpur
-    - Sabah
-  focus_district: Tapah
+  - Perak
+  - W.P. Kuala Lumpur
+  - Sabah
+  focus_district: Batang Padang
   household_size: 4
   household_monthly_income_rm: 2100
   ramadan_months:
-    - "2022-04"
-    - "2022-05"
-    - "2023-03"
-    - "2023-04"
-    - "2024-03"
-    - "2024-04"
-    - "2025-03"
-    - "2025-04"
-    - "2026-02"
-    - "2026-03"
-
+  - 2022-04
+  - 2022-05
+  - 2023-03
+  - 2023-04
+  - 2024-03
+  - 2024-04
+  - 2025-03
+  - 2025-04
+  - 2026-02
+  - 2026-03
 basket:
   items:
-    - name: Beras putih
-      lookup_name: BERAS CAP JATI (SST5%)
-      item_code: "992"
-      quantity: 1
-      quantity_unit: 10kg
-    - name: Ayam
-      lookup_name: AYAM BERSIH - STANDARD
-      item_code: "1"
-      quantity: 6
-      quantity_unit: kg
-    - name: Telur
-      lookup_name: TELUR AYAM GRED A
-      item_code: "1109"
-      quantity: 1
-      quantity_unit: tray-30
-    - name: Minyak masak
-      lookup_name: MINYAK MASAK PAKET (PELBAGAI JENAMA)
-      item_code: "918"
-      quantity: 3
-      quantity_unit: 1kg
-    - name: Gula
-      lookup_name: GULA PUTIH BERTAPIS HALUS (PELBAGAI JENAMA)
-      item_code: "1590"
-      quantity: 2
-      quantity_unit: 1kg
-    - name: Tepung
-      lookup_name: TEPUNG GANDUM GP (BERBUNGKUS) PELBAGAI JENAMA
-      item_code: "1593"
-      quantity: 2
-      quantity_unit: 1kg
-    - name: Susu pekat
-      lookup_name: SUSU ISIAN PEKAT MANIS CAP F & N
-      item_code: "1618"
-      quantity: 2
-      quantity_unit: 500g
-    - name: Kicap
-      lookup_name: KICAP SOYA PEKAT MANIS CAP AYAM
-      item_code: "1828"
-      quantity: 1
-      quantity_unit: 330ml
-    - name: Bawang
-      lookup_name: BAWANG BESAR IMPORT (INDIA)
-      item_code: "1440"
-      quantity: 2
-      quantity_unit: kg
-    - name: Cili
-      lookup_name: CILI MERAH - KULAI
-      item_code: "93"
-      quantity: 0.5
-      quantity_unit: kg
-    - name: Ikan kembung
-      lookup_name: IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)
-      item_code: "1476"
-      quantity: 2
-      quantity_unit: kg
-    - name: Sayur sawi
-      lookup_name: SAWI HIJAU
-      item_code: "1558"
-      quantity: 2
-      quantity_unit: kg
-    - name: Roti
-      lookup_name: ROTI SANDWICH GARDENIA ORIGINAL CLASSIC
-      item_code: "272"
-      quantity: 4
-      quantity_unit: 400g
-    - name: Mee segera
-      lookup_name: MAGGI MI SEGERA PERISA KARI
-      item_code: "1976"
-      quantity: 2
-      quantity_unit: 5x79g
-    - name: Sabun
-      lookup_name: SABUN MANDIAN DETTOL ANTIBACTERIAL (FRESH)
-      item_code: "1980"
-      quantity: 1
-      quantity_unit: 500ml
-
+  - name: Beras putih
+    quantity: 1
+    quantity_unit: 10kg
+    state_proxies:
+      Perak:
+        lookup_name: BERAS SUPER CAP RAMBUTAN 5% (IMPORT)
+        item_code: '904'
+      W.P. Kuala Lumpur:
+        lookup_name: BERAS SUPER CAP RAMBUTAN 5% (IMPORT)
+        item_code: '904'
+      Sabah:
+        lookup_name: BERAS SUPER CAP ANGGUR SAZARICE 5% (IMPORT THAILAND)
+        item_code: '1825'
+  - name: Ayam
+    lookup_name: AYAM BERSIH - STANDARD
+    item_code: '1'
+    quantity: 6
+    quantity_unit: kg
+  - name: Telur
+    lookup_name: TELUR AYAM GRED A
+    item_code: '1109'
+    quantity: 1
+    quantity_unit: tray-30
+  - name: Minyak masak
+    lookup_name: MINYAK MASAK PAKET (PELBAGAI JENAMA)
+    item_code: '918'
+    quantity: 3
+    quantity_unit: 1kg
+  - name: Gula
+    lookup_name: GULA PUTIH BERTAPIS HALUS (PELBAGAI JENAMA)
+    item_code: '1590'
+    quantity: 2
+    quantity_unit: 1kg
+  - name: Tepung
+    lookup_name: TEPUNG GANDUM NGP (BERBUNGKUS, CAP SAUH)
+    item_code: '917'
+    quantity: 2
+    quantity_unit: 1kg
+  - name: Susu pekat
+    lookup_name: SUSU ISIAN PEKAT MANIS CAP F & N
+    item_code: '1618'
+    quantity: 2
+    quantity_unit: 500g
+  - name: Kicap
+    lookup_name: KICAP MANIS ADABI
+    item_code: '1135'
+    quantity: 1
+    quantity_unit: 340ml
+  - name: Bawang
+    lookup_name: BAWANG BESAR IMPORT (INDIA)
+    item_code: '1440'
+    quantity: 2
+    quantity_unit: kg
+  - name: Cili
+    lookup_name: CILI MERAH - KULAI
+    item_code: '93'
+    quantity: 0.5
+    quantity_unit: kg
+  - name: Ikan kembung
+    lookup_name: IKAN KEMBUNG (ANTARA 8 HINGGA 12 EKOR SEKILOGRAM)
+    item_code: '1476'
+    quantity: 2
+    quantity_unit: kg
+  - name: Sayur sawi
+    lookup_name: SAWI HIJAU
+    item_code: '1558'
+    quantity: 2
+    quantity_unit: kg
+  - name: Roti
+    lookup_name: ROTI SANDWICH GARDENIA ORIGINAL CLASSIC
+    item_code: '272'
+    quantity: 4
+    quantity_unit: 400g
+  - name: Mee segera
+    lookup_name: MAGGI MI SEGERA PERISA KARI
+    item_code: '1976'
+    quantity: 2
+    quantity_unit: 5x79g
+  - name: Sabun
+    lookup_name: SABUN MANDIAN DETTOL ANTIBACTERIAL (FRESH)
+    item_code: '1980'
+    quantity: 1
+    quantity_unit: 500ml
 paths:
   raw_dir: data/raw
   lookup_dir: data/lookup

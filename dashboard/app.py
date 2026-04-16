@@ -93,7 +93,7 @@ if len(district_series) > 1 and float(district_series["cost_item"].iloc[0]) > 0:
 col1, col2, col3, col4 = st.columns(4)
 col1.metric(f"Kos Bakul {selected_district}", f"RM {latest_cost:,.2f}")
 col2.metric("Beban Pendapatan", f"{latest_burden:.2f}%")
-col3.metric("Perubahan 12 Bulan", f"{change_pct:.2f}%")
+col3.metric("Perubahan Sejak Mula", f"{change_pct:.2f}%")
 income_label = "Pendapatan Rujukan Negeri"
 if income_year:
     income_label = f"Pendapatan Rujukan Negeri ({income_year})"

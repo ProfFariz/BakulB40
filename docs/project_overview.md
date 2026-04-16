@@ -56,7 +56,6 @@ flowchart LR
 
 - `src/download_data.py`: download monthly PriceCatcher files and lookup tables
 - `src/clean_data.py`: merge transaction data with item and premise lookup, then filter the relevant basket items
-- `src/calculate_basket.py`: calculate monthly basket cost, burden percentage, inflation, volatility, urban-rural gap, and Ramadan effect
 - `src/calculate_basket.py`: calculate monthly basket cost, burden percentage, inflation, CPI comparison, volatility, urban-rural gap, and Ramadan effect
 - `src/generate_report.py`: build the PDF report from processed outputs
 - `dashboard/app.py`: Streamlit dashboard for filters, KPI cards, charts, and data table
@@ -97,27 +96,25 @@ flowchart TD
 - `dashboard/`: presentation layer for Streamlit
 - `docs/`: supporting project documentation
 
-## Current Project State Vs Target Brief
+## Current Project State And Remaining Work
 
-This is the simplest way to see what is done and what is still missing.
+This is the simplest way to see what is already implemented and what still needs final polish.
 
 ```mermaid
 flowchart LR
-  A["Current Prototype"] --> A1["Demo works"]
+  A["Current Implementation"] --> A1["Real-data pipeline works"]
   A --> A2["Dashboard works"]
   A --> A3["PDF works"]
   A --> A4["15 basket items configured"]
   A --> A5["2022-01 to 2026-03 configured"]
   A --> A6["State wage reference + CPI benchmark"]
 
-  B["Target Assignment Version"] --> B1["2022-01 to 2026-03"]
-  B --> B2["15 basket items"]
-  B --> B3["CPI Low-Income integrated"]
-  B --> B4["Wages by state integrated"]
-  B --> B5["README data dictionary"]
-  B --> B6["Final real-data outputs"]
+  B["Remaining Polish"] --> B1["Proxy-item review"]
+  B --> B2["Final wording cleanup"]
+  B --> B3["Optional supervisor-specific tweaks"]
+  B --> B4["Submission packaging"]
 
-  A --> C["Next upgrade path"]
+  A --> C["Next focus"]
   C --> B
 ```
 
@@ -169,9 +166,9 @@ It is more like:
 
 ## Simple Takeaway
 
-Current repo = **working prototype**
+Current repo = **working real-data version with demo bootstrap**
 
-Target brief = **full real-data assignment version**
+Remaining work = **submission polish and any supervisor-driven refinement**
 
 So the current repo already gives:
 
@@ -180,7 +177,7 @@ So the current repo already gives:
 - a working report flow
 - a place to continue building
 
-But to fully match the assignment brief, it still needs:
+What is still worth doing next:
 
-- final real-data outputs
-- any final refinement to proxy item selection if your supervisor wants a different representative product mapping
+- review whether each proxy item is the best representative product for the brief
+- tighten wording, screenshots, and packaging for final submission
