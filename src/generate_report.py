@@ -46,7 +46,7 @@ def build_story() -> list:
         Spacer(1, 0.4 * cm),
         Paragraph("Soalan utama", styles["Heading2"]),
         Paragraph(
-            "Berapa peratus gaji isi rumah B40 habis hanya untuk 6 barang dapur asas, "
+            "Berapa peratus gaji isi rumah B40 habis hanya untuk 15 item asas isi rumah, "
             "dan negeri mana paling tertekan?",
             styles["BodySmall"],
         ),
@@ -59,6 +59,19 @@ def build_story() -> list:
             ["Bulan terkini", str(kpis.get("latest_month", "N/A"))],
             ["Kos bakul Tapah", f"RM{kpis.get('latest_focus_cost_rm', 0):.2f}"],
             ["Beban pendapatan", f"{kpis.get('latest_focus_burden_pct', 0):.2f}%"],
+            [
+                "Pendapatan rujukan negeri",
+                f"RM{kpis.get('reference_income_rm', 0):.0f}"
+                + (f" ({kpis.get('reference_income_year')})" if kpis.get("reference_income_year") else ""),
+            ],
+            [
+                "Jurang bakul vs CPI",
+                (
+                    f"{kpis.get('latest_basket_vs_cpi_gap', 0):.2f} mata"
+                    if kpis.get("latest_basket_vs_cpi_gap") is not None
+                    else "N/A"
+                ),
+            ],
             ["Perubahan 12 bulan", f"{kpis.get('focus_district_12m_change_pct', 0):.2f}%"],
             ["Negeri paling tertekan", str(kpis.get("highest_pressure_state", "N/A"))],
         ],
@@ -81,16 +94,18 @@ def build_story() -> list:
             Spacer(1, 0.4 * cm),
             Paragraph("Metodologi", styles["Heading2"]),
             Paragraph(
-                "1. Muat turun 12 bulan PriceCatcher bersama lookup item dan premis. "
-                "2. Tapis kepada 6 item bakul dan 3 negeri fokus. "
+                "1. Muat turun PriceCatcher bagi julat bulan analisis bersama lookup item dan premis. "
+                "2. Tapis kepada 15 item bakul dan 3 negeri fokus. "
                 "3. Kira harga purata bulanan dan jumlahkan kos bakul keluarga 4 orang. "
-                "4. Tukarkan kepada peratus beban terhadap pendapatan rujukan RM2,100.",
+                "4. Tukarkan kepada peratus beban terhadap pendapatan rujukan gaji median bulanan mengikut negeri, "
+                "dengan tahun rujukan rasmi terkini dibawa ke hadapan jika bulan analisis melebihi tahun data gaji. "
+                "5. Bandingkan trajektori indeks bakul dengan CPI Low-Income keseluruhan sebagai benchmark inflasi isi rumah berpendapatan rendah.",
                 styles["BodySmall"],
             ),
             Paragraph("Sumber data", styles["Heading2"]),
             Paragraph(
                 "PriceCatcher data.gov.my, lookup_item.parquet, lookup_premise.parquet, "
-                "CPI Low-Income Households, dan sumber gaji DOSM. Akses pada 2026-04-09. "
+                "CPI Low-Income Households, dan Salaries & Wages Survey DOSM. Akses pada 2026-04-16. "
                 "Lesen data: CC BY 4.0.",
                 styles["BodySmall"],
             ),
@@ -104,7 +119,7 @@ def build_story() -> list:
         ]
     )
 
-    for insight in insights[:3]:
+    for insight in insights[:4]:
         story.append(Paragraph(f"<b>{insight['title']}</b>: {insight['detail']}", styles["BodySmall"]))
 
     story.extend(
@@ -113,6 +128,8 @@ def build_story() -> list:
             Paragraph("Analisis tambahan", styles["Heading2"]),
             report_image(paths["figures_dir"] / "03_inflasi_item.png", 16.5, 6.2),
             Spacer(1, 0.2 * cm),
+            report_image(paths["figures_dir"] / "06_bakul_vs_cpi_lowincome.png", 16.5, 6.2),
+            Spacer(1, 0.2 * cm),
             report_image(paths["figures_dir"] / "04_jurang_bandar_luar_bandar.png", 16.5, 6.2),
             Spacer(1, 0.2 * cm),
             report_image(paths["figures_dir"] / "05_kesan_ramadan.png", 16.5, 6.2),
@@ -120,7 +137,9 @@ def build_story() -> list:
             Paragraph("Limitasi", styles["Heading2"]),
             Paragraph(
                 "Klasifikasi bandar-luar bandar menggunakan heuristik metadata premis, "
-                "manakala analisis beban pendapatan menggunakan satu nilai rujukan RM2,100. "
+                "manakala analisis beban pendapatan menggunakan gaji median bulanan pekerja mengikut negeri "
+                "sebagai proksi rujukan, dengan carry-forward pada tahun rasmi terkini yang tersedia jika perlu. "
+                "CPI Low-Income digunakan sebagai benchmark konteks, bukan sebagai denominator beban pendapatan. "
                 "Output demo dibundel untuk memudahkan semakan awal, dan boleh diganti "
                 "sepenuhnya dengan output data sebenar selepas pipeline penuh dijalankan.",
                 styles["BodySmall"],

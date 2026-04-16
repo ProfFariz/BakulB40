@@ -1,0 +1,766 @@
+metric,state,year,value,unit,source_table,source_title,source_release_date,source_pdf
+mean_monthly_wage_rm,Johor,2010,1795.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2011,1940.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2012,2035.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2013,2114.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2014,2466.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2015,2549.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2016,2656.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2017,2932.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2018,3228.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2019,3266.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2020,2827.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2021,2850.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2022,2992.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2023,3212.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Johor,2024,3414.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2010,1501.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2011,1555.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2012,1543.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2013,1759.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2014,1972.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2015,2024.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2016,2109.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2017,2193.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2018,2294.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2019,2413.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2020,2289.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2021,2516.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2022,2627.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2023,2859.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kedah,2024,3053.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2010,1645.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2011,1622.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2012,1604.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2013,1662.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2014,1853.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2015,2069.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2016,2248.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2017,2319.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2018,2419.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2019,2571.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2020,2467.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2021,2522.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2022,2604.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2023,2882.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Kelantan,2024,3091.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2010,1936.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2011,1959.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2012,2052.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2013,2186.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2014,2377.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2015,2487.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2016,2657.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2017,2879.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2018,3087.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2019,3224.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2020,2954.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2021,3049.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2022,3219.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2023,3441.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Malaysia,2024,3652.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2010,1717.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2011,1765.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2012,1879.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2013,2061.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2014,2123.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2015,2174.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2016,2297.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2017,2565.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2018,2853.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2019,2990.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2020,2925.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2021,2950.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2022,3093.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2023,3311.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Melaka,2024,3469.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2010,1885.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2011,1975.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2012,1922.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2013,2246.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2014,2445.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2015,2464.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2016,2628.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2017,2874.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2018,3048.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2019,3218.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2020,2989.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2021,3060.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2022,3177.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2023,3375.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Negeri Sembilan,2024,3626.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2010,1660.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2011,1695.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2012,1718.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2013,1919.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2014,2062.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2015,2122.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2016,2185.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2017,2425.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2018,2662.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2019,2754.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2020,2690.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2021,2727.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2022,2844.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2023,3124.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pahang,2024,3337.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2010,1622.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2011,1607.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2012,1712.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2013,1732.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2014,1859.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2015,2030.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2016,2206.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2017,2281.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2018,2387.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2019,2571.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2020,2468.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2021,2619.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2022,2742.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2023,2973.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perak,2024,3172.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2010,1709.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2011,1682.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2012,1609.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2013,1710.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2014,2084.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2015,2248.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2016,2271.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2017,2465.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2018,2628.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2019,2723.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2020,2605.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2021,2676.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2022,2746.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2023,2968.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Perlis,2024,3257.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2010,1944.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2011,2016.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2012,2021.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2013,2106.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2014,2339.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2015,2414.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2016,2603.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2017,2672.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2018,2811.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2019,3022.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2020,2881.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2021,3089.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2022,3315.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2023,3557.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Pulau Pinang,2024,3787.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2010,1578.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2011,1623.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2012,1634.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2013,1877.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2014,1998.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2015,2046.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2016,2224.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2017,2507.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2018,2745.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2019,2836.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2020,2648.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2021,2784.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2022,2871.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2023,3127.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sabah,2024,3389.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2010,1706.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2011,1753.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2012,1735.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2013,1929.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2014,2069.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2015,2077.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2016,2255.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2017,2513.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2018,2757.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2019,2819.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2020,2515.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2021,2786.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2022,2937.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2023,3158.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Sarawak,2024,3424.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2010,2429.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2011,2314.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2012,2501.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2013,2666.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2014,2820.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2015,3073.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2016,3239.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2017,3454.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2018,3668.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2019,3892.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2020,3476.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2021,3475.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2022,3719.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2023,3885.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Selangor,2024,4052.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2010,1737.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2011,1645.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2012,1761.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2013,1819.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2014,1932.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2015,2107.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2016,2341.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2017,2522.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2018,2695.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2019,2766.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2020,2441.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2021,2544.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2022,2615.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2023,2898.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,Terengganu,2024,3107.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2010,2290.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2011,2513.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2012,2729.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2013,2717.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2014,3111.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2015,3162.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2016,3482.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2017,3969.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2018,4336.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2019,4359.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2020,3849.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2021,3994.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2022,4276.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2023,4521.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Kuala Lumpur,2024,4782.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2010,1993.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2011,1903.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2012,1931.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2013,2254.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2014,2317.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2015,2425.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2016,2610.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2017,2849.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2018,3054.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2019,3323.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2020,2931.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2021,3281.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2022,3365.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2023,3636.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Labuan,2024,3812.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2010,2689.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2011,2837.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2012,3124.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2013,3183.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2014,3267.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2015,3743.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2016,3995.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2017,4220.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2018,4530.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2019,4695.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2020,4497.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2021,4602.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2022,4716.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2023,4858.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+mean_monthly_wage_rm,W.P. Putrajaya,2024,5091.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2010,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2011,1520.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2012,1695.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2013,1700.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2014,2000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2015,2200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2016,2200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2017,2250.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2018,2418.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2019,2512.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2020,2076.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2021,2191.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2022,2216.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2023,2450.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Johor,2024,2582.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2010,1060.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2011,1190.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2012,1150.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2013,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2014,1300.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2015,1400.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2016,1510.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2017,1650.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2018,1703.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2019,1748.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2020,1509.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2021,1621.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2022,1797.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2023,1885.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kedah,2024,2051.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2010,1000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2011,1000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2012,1000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2013,1000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2014,1040.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2015,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2016,1345.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2017,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2018,1604.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2019,1639.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2020,1390.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2021,1568.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2022,1635.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2023,1750.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Kelantan,2024,1914.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2010,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2011,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2012,1566.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2013,1700.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2014,1800.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2015,1942.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2016,2000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2017,2160.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2018,2308.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2019,2442.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2020,2076.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2021,2256.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2022,2429.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2023,2602.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Malaysia,2024,2793.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2010,1300.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2011,1350.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2012,1440.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2013,1580.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2014,1660.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2015,1600.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2016,1760.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2017,2145.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2018,2332.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2019,2415.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2020,2130.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2021,2164.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2022,2280.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2023,2360.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Melaka,2024,2528.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2010,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2011,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2012,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2013,1800.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2014,1800.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2015,1950.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2016,2060.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2017,2170.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2018,2348.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2019,2433.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2020,2011.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2021,2321.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2022,2334.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2023,2361.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Negeri Sembilan,2024,2503.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2010,1341.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2011,1380.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2012,1327.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2013,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2014,1585.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2015,1620.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2016,1650.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2017,1870.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2018,2111.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2019,2225.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2020,1775.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2021,1897.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2022,2013.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2023,2276.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pahang,2024,2491.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2010,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2011,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2012,1300.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2013,1300.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2014,1441.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2015,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2016,1650.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2017,1700.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2018,1775.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2019,1858.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2020,1666.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2021,1898.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2022,1901.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2023,2045.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perak,2024,2050.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2010,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2011,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2012,1050.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2013,1000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2014,1350.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2015,1495.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2016,1630.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2017,1800.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2018,1989.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2019,2010.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2020,1541.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2021,1713.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2022,1781.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2023,1820.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Perlis,2024,2038.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2010,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2011,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2012,1515.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2013,1631.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2014,1800.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2015,1900.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2016,2000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2017,2160.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2018,2215.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2019,2346.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2020,2115.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2021,2414.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2022,2477.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2023,2715.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Pulau Pinang,2024,2934.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2010,1188.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2011,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2012,1100.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2013,1300.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2014,1400.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2015,1480.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2016,1600.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2017,1763.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2018,1951.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2019,1980.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2020,1705.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2021,1899.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2022,2011.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2023,2059.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sabah,2024,2236.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2010,1100.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2011,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2012,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2013,1400.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2014,1400.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2015,1450.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2016,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2017,1800.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2018,2033.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2019,2070.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2020,1595.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2021,2036.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2022,2069.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2023,2276.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Sarawak,2024,2490.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2010,1894.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2011,1800.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2012,2000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2013,2000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2014,2200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2015,2500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2016,2500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2017,2580.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2018,2695.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2019,2956.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2020,2713.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2021,2778.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2022,3109.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2023,3235.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Selangor,2024,3350.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2010,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2011,1158.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2012,1200.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2013,1150.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2014,1250.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2015,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2016,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2017,1700.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2018,1874.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2019,1911.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2020,1537.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2021,1549.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2022,1703.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2023,1845.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,Terengganu,2024,2021.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2010,1900.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2011,2000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2012,2000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2013,2295.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2014,2500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2015,2500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2016,2500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2017,2650.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2018,2946.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2019,3106.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2020,2995.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2021,2999.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2022,3301.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2023,3469.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Kuala Lumpur,2024,3687.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2010,1675.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2011,1500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2012,1519.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2013,1800.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2014,1700.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2015,1900.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2016,2000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2017,2170.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2018,2419.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2019,2712.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2020,2154.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2021,2573.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2022,2657.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2023,2735.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Labuan,2024,2931.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2010,2095.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2011,2320.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2012,2625.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2013,2500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2014,2695.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2015,3000.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2016,3250.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2017,3500.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2018,3673.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2019,3749.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2020,3682.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2021,3858.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2022,3995.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2023,4443.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+median_monthly_wage_rm,W.P. Putrajaya,2024,4598.0,RM,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2010,913.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2011,973.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2012,972.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2013,1023.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2014,1054.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2015,1013.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2016,1039.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2017,1092.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2018,1106.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2019,1133.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2020,1244.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2021,1266.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2022,1351.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2023,1367.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Johor,2024,1388.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2010,449.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2011,442.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2012,434.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2013,455.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2014,502.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2015,519.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2016,502.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2017,506.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2018,529.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2019,550.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2020,552.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2021,565.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2022,578.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2023,567.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kedah,2024,569.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2010,252.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2011,288.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2012,290.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2013,293.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2014,314.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2015,337.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2016,352.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2017,362.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2018,367.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2019,383.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2020,373.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2021,404.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2022,394.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2023,389.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Kelantan,2024,393.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2010,7149.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2011,7634.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2012,7782.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2013,7903.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2014,8392.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2015,8348.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2016,8424.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2017,8677.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2018,8761.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2019,9195.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2020,9456.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2021,9769.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2022,9996.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2023,10105.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Malaysia,2024,10238.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2010,227.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2011,234.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2012,238.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2013,244.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2014,255.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2015,187.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2016,271.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2017,284.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2018,283.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2019,299.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2020,319.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2021,337.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2022,336.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2023,346.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Melaka,2024,350.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2010,234.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2011,267.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2012,267.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2013,268.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2014,281.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2015,275.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2016,294.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2017,303.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2018,309.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2019,314.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2020,344.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2021,343.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2022,342.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2023,350.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Negeri Sembilan,2024,356.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2010,315.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2011,347.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2012,348.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2013,338.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2014,391.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2015,507.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2016,374.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2017,386.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2018,393.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2019,424.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2020,446.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2021,445.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2022,444.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2023,454.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pahang,2024,465.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2010,545.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2011,594.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2012,584.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2013,589.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2014,644.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2015,653.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2016,647.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2017,659.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2018,676.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2019,699.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2020,700.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2021,714.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2022,731.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2023,729.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perak,2024,735.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2010,46.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2011,47.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2012,49.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2013,50.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2014,56.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2015,56.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2016,62.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2017,61.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2018,61.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2019,69.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2020,74.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2021,78.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2022,76.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2023,76.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Perlis,2024,80.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2010,501.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2011,527.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2012,525.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2013,529.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2014,553.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2015,556.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2016,555.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2017,565.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2018,566.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2019,586.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2020,614.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2021,604.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2022,641.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2023,635.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Pulau Pinang,2024,642.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2010,504.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2011,561.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2012,582.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2013,608.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2014,645.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2015,646.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2016,661.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2017,654.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2018,665.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2019,688.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2020,647.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2021,696.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2022,721.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2023,726.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sabah,2024,730.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2010,579.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2011,605.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2012,635.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2013,632.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2014,696.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2015,697.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2016,706.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2017,728.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2018,743.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2019,775.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2020,691.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2021,733.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2022,741.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2023,758.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Sarawak,2024,771.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2010,1733.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2011,1845.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2012,1948.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2013,1952.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2014,2058.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2015,1982.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2016,2043.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2017,2147.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2018,2153.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2019,2333.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2020,2461.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2021,2526.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2022,2560.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2023,2596.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Selangor,2024,2610.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2010,225.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2011,248.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2012,248.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2013,243.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2014,260.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2015,267.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2016,272.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2017,285.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2018,285.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2019,306.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2020,302.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2021,307.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2022,307.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2023,312.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,Terengganu,2024,320.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2010,558.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2011,580.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2012,589.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2013,606.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2014,609.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2015,583.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2016,575.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2017,579.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2018,557.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2019,564.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2020,619.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2021,678.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2022,701.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2023,725.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Kuala Lumpur,2024,752.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2010,27.9,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2011,29.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2012,30.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2013,29.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2014,31.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2015,30.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2016,30.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2017,28.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2018,31.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2019,30.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2020,29.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2021,30.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2022,31.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2023,31.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Labuan,2024,32.3,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2010,35.6,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2011,37.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2012,36.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2013,35.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2014,36.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2015,34.4,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2016,33.7,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2017,32.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2018,33.2,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2019,32.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2020,34.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2021,36.1,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2022,35.8,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2023,36.0,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf
+number_of_recipients_000,W.P. Putrajaya,2024,38.5,thousand_recipients,A8,Salaries and Wages Survey Report 2024,2025-09-29,salaries_wages_survey_report_2024.pdf

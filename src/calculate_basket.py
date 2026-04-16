@@ -14,6 +14,7 @@ from common import (
     ensure_directories,
     get_paths,
     load_config,
+    month_range,
     read_json,
     write_json,
 )
@@ -37,7 +38,108 @@ def build_monthly_item_basket(clean: pd.DataFrame, config: dict) -> pd.DataFrame
     return grouped
 
 
-def build_total_basket(item_monthly: pd.DataFrame, income_rm: float) -> pd.DataFrame:
+def load_cpi_low_income(cpi_parquet: Path, months: list[str]) -> pd.DataFrame:
+    empty = pd.DataFrame(
+        columns=[
+            "date",
+            "bulan",
+            "division",
+            "cpi_index",
+            "cpi_mom_change_pct",
+            "cpi_yoy_change_pct",
+        ]
+    )
+    if not cpi_parquet.exists():
+        return empty
+
+    frame = pd.read_parquet(cpi_parquet)
+    required_columns = {"date", "division", "index"}
+    if not required_columns.issubset(frame.columns):
+        return empty
+
+    frame = frame[list(required_columns)].copy()
+    frame["date"] = pd.to_datetime(frame["date"], errors="coerce")
+    frame["division"] = frame["division"].astype(str).str.strip()
+    frame["cpi_index"] = pd.to_numeric(frame["index"], errors="coerce")
+    frame = frame.drop(columns=["index"]).dropna(subset=["date", "division", "cpi_index"])
+    frame["bulan"] = frame["date"].dt.strftime("%Y-%m")
+    frame = frame[frame["bulan"].isin(months)].copy()
+    if frame.empty:
+        return empty
+
+    overall = frame[frame["division"].str.lower() == "overall"].copy()
+    frame = overall if not overall.empty else frame
+    frame = frame.sort_values(["division", "date"]).reset_index(drop=True)
+    frame["cpi_mom_change_pct"] = frame.groupby("division")["cpi_index"].pct_change().mul(100).round(2)
+    frame["cpi_yoy_change_pct"] = frame.groupby("division")["cpi_index"].pct_change(12).mul(100).round(2)
+    return frame
+
+
+def load_state_wages(wages_csv: Path) -> pd.DataFrame:
+    if not wages_csv.exists():
+        return pd.DataFrame(columns=["state", "year", "median_monthly_wage_rm"])
+
+    frame = pd.read_csv(wages_csv)
+    required_columns = {"state", "year", "median_monthly_wage_rm"}
+    if not required_columns.issubset(frame.columns):
+        return pd.DataFrame(columns=["state", "year", "median_monthly_wage_rm"])
+
+    frame = frame[list(required_columns)].copy()
+    frame["state"] = frame["state"].astype(str).str.strip()
+    frame["year"] = pd.to_numeric(frame["year"], errors="coerce")
+    frame["median_monthly_wage_rm"] = pd.to_numeric(frame["median_monthly_wage_rm"], errors="coerce")
+    frame = frame.dropna(subset=["state", "year", "median_monthly_wage_rm"])
+    frame = frame[frame["median_monthly_wage_rm"] > 0].copy()
+    frame["year"] = frame["year"].astype(int)
+    return frame.sort_values(["state", "year"]).reset_index(drop=True)
+
+
+def attach_income_reference(
+    total_basket: pd.DataFrame,
+    wages: pd.DataFrame,
+    fallback_income_rm: float,
+) -> pd.DataFrame:
+    frame = total_basket.copy()
+    frame["year"] = frame["bulan"].str.slice(0, 4).astype(int)
+    frame["household_income_rm"] = fallback_income_rm
+    frame["income_reference_method"] = "config_fallback"
+
+    if wages.empty:
+        frame["income_reference_year"] = pd.NA
+        frame["burden_pct"] = (frame["cost_item"] / frame["household_income_rm"] * 100).round(2)
+        return frame
+
+    malaysia_reference = wages[wages["state"] == "Malaysia"].sort_values("year")
+    enriched_parts: list[pd.DataFrame] = []
+
+    for state, group in frame.groupby("state", dropna=False):
+        state_rows = group.sort_values("year").copy()
+        state_reference = wages[wages["state"] == state].sort_values("year")
+        reference = state_reference if not state_reference.empty else malaysia_reference
+        reference = reference[["year", "median_monthly_wage_rm"]].rename(columns={"year": "income_reference_year"})
+
+        merged = pd.merge_asof(
+            state_rows,
+            reference,
+            left_on="year",
+            right_on="income_reference_year",
+            direction="backward",
+        )
+
+        merged["household_income_rm"] = merged["median_monthly_wage_rm"].fillna(fallback_income_rm)
+        merged["income_reference_method"] = merged["median_monthly_wage_rm"].apply(
+            lambda value: "state_median_wage" if pd.notna(value) else "config_fallback"
+        )
+        merged = merged.drop(columns=["median_monthly_wage_rm"])
+        enriched_parts.append(merged)
+
+    enriched = pd.concat(enriched_parts, ignore_index=True)
+    enriched["household_income_rm"] = enriched["household_income_rm"].round(2)
+    enriched["burden_pct"] = (enriched["cost_item"] / enriched["household_income_rm"] * 100).round(2)
+    return enriched.sort_values(["bulan", "state", "district", "area_type"]).reset_index(drop=True)
+
+
+def build_total_basket(item_monthly: pd.DataFrame, wages: pd.DataFrame, fallback_income_rm: float) -> pd.DataFrame:
     totals = (
         item_monthly.groupby(["bulan", "state", "district", "area_type"], dropna=False)
         .agg(
@@ -48,9 +150,61 @@ def build_total_basket(item_monthly: pd.DataFrame, income_rm: float) -> pd.DataF
         .reset_index()
     )
     totals["cost_item"] = totals["cost_item"].round(2)
-    totals["household_income_rm"] = income_rm
-    totals["burden_pct"] = (totals["cost_item"] / income_rm * 100).round(2)
-    return totals
+    return attach_income_reference(totals, wages, fallback_income_rm)
+
+
+def build_basket_vs_cpi_table(total_basket: pd.DataFrame, cpi_low_income: pd.DataFrame) -> pd.DataFrame:
+    monthly_basket = (
+        total_basket.groupby("bulan", dropna=False)["cost_item"]
+        .mean()
+        .reset_index()
+        .rename(columns={"cost_item": "national_avg_basket_cost_rm"})
+        .sort_values("bulan")
+    )
+    if monthly_basket.empty:
+        return pd.DataFrame(
+            columns=[
+                "bulan",
+                "national_avg_basket_cost_rm",
+                "basket_index",
+                "low_income_cpi_index",
+                "low_income_cpi_rebased",
+                "cpi_mom_change_pct",
+                "cpi_yoy_change_pct",
+                "basket_vs_cpi_gap",
+            ]
+        )
+
+    base_basket = float(monthly_basket["national_avg_basket_cost_rm"].iloc[0])
+    monthly_basket["basket_index"] = (monthly_basket["national_avg_basket_cost_rm"] / base_basket * 100).round(2)
+
+    if cpi_low_income.empty:
+        monthly_basket["low_income_cpi_index"] = pd.NA
+        monthly_basket["low_income_cpi_rebased"] = pd.NA
+        monthly_basket["cpi_mom_change_pct"] = pd.NA
+        monthly_basket["cpi_yoy_change_pct"] = pd.NA
+        monthly_basket["basket_vs_cpi_gap"] = pd.NA
+        return monthly_basket
+
+    cpi_series = (
+        cpi_low_income.sort_values("bulan")[["bulan", "cpi_index", "cpi_mom_change_pct", "cpi_yoy_change_pct"]]
+        .drop_duplicates("bulan")
+        .rename(columns={"cpi_index": "low_income_cpi_index"})
+    )
+    comparison = monthly_basket.merge(cpi_series, on="bulan", how="left")
+    first_cpi = comparison["low_income_cpi_index"].dropna()
+    if first_cpi.empty:
+        comparison["low_income_cpi_rebased"] = pd.NA
+        comparison["basket_vs_cpi_gap"] = pd.NA
+    else:
+        comparison["low_income_cpi_rebased"] = (
+            comparison["low_income_cpi_index"] / float(first_cpi.iloc[0]) * 100
+        ).round(2)
+        comparison["basket_vs_cpi_gap"] = (
+            comparison["basket_index"] - comparison["low_income_cpi_rebased"]
+        ).round(2)
+    comparison["national_avg_basket_cost_rm"] = comparison["national_avg_basket_cost_rm"].round(2)
+    return comparison
 
 
 def build_inflation_table(item_monthly: pd.DataFrame) -> pd.DataFrame:
@@ -109,11 +263,16 @@ def build_ramadan_table(total_basket: pd.DataFrame, config: dict) -> pd.DataFram
     return grouped
 
 
-def build_kpis(total_basket: pd.DataFrame, volatility: pd.DataFrame, config: dict, data_mode: str) -> dict:
+def build_kpis(
+    total_basket: pd.DataFrame,
+    volatility: pd.DataFrame,
+    basket_vs_cpi: pd.DataFrame,
+    config: dict,
+    data_mode: str,
+) -> dict:
     latest_month = total_basket["bulan"].max()
     earliest_month = total_basket["bulan"].min()
     focus_district = config["analysis"]["focus_district"]
-    income_rm = config["analysis"]["household_monthly_income_rm"]
 
     latest_focus = total_basket[
         (total_basket["district"] == focus_district) & (total_basket["bulan"] == latest_month)
@@ -124,6 +283,16 @@ def build_kpis(total_basket: pd.DataFrame, volatility: pd.DataFrame, config: dic
 
     latest_focus_cost = float(latest_focus["cost_item"].iloc[0]) if not latest_focus.empty else 0.0
     latest_focus_burden = float(latest_focus["burden_pct"].iloc[0]) if not latest_focus.empty else 0.0
+    reference_income_rm = float(latest_focus["household_income_rm"].iloc[0]) if not latest_focus.empty else 0.0
+    reference_income_year = (
+        int(latest_focus["income_reference_year"].iloc[0])
+        if not latest_focus.empty and pd.notna(latest_focus["income_reference_year"].iloc[0])
+        else None
+    )
+    latest_focus_state = str(latest_focus["state"].iloc[0]) if not latest_focus.empty else "N/A"
+    reference_income_method = (
+        str(latest_focus["income_reference_method"].iloc[0]) if not latest_focus.empty else "config_fallback"
+    )
     focus_change = 0.0
     if not latest_focus.empty and not baseline_focus.empty and float(baseline_focus["cost_item"].iloc[0]) > 0:
         start_cost = float(baseline_focus["cost_item"].iloc[0])
@@ -138,6 +307,28 @@ def build_kpis(total_basket: pd.DataFrame, volatility: pd.DataFrame, config: dic
     latest_pressure_state = latest_state.index[0] if not latest_state.empty else "N/A"
     latest_pressure_value = round(float(latest_state.iloc[0]), 2) if not latest_state.empty else 0.0
 
+    latest_cpi_row = pd.DataFrame()
+    if not basket_vs_cpi.empty:
+        latest_cpi_row = basket_vs_cpi[basket_vs_cpi["low_income_cpi_index"].notna()].sort_values("bulan").tail(1)
+    latest_low_income_cpi_month = (
+        str(latest_cpi_row["bulan"].iloc[0]) if not latest_cpi_row.empty else None
+    )
+    latest_low_income_cpi_index = (
+        round(float(latest_cpi_row["low_income_cpi_index"].iloc[0]), 2)
+        if not latest_cpi_row.empty and pd.notna(latest_cpi_row["low_income_cpi_index"].iloc[0])
+        else None
+    )
+    latest_low_income_cpi_yoy_pct = (
+        round(float(latest_cpi_row["cpi_yoy_change_pct"].iloc[0]), 2)
+        if not latest_cpi_row.empty and pd.notna(latest_cpi_row["cpi_yoy_change_pct"].iloc[0])
+        else None
+    )
+    latest_basket_vs_cpi_gap = (
+        round(float(latest_cpi_row["basket_vs_cpi_gap"].iloc[0]), 2)
+        if not latest_cpi_row.empty and pd.notna(latest_cpi_row["basket_vs_cpi_gap"].iloc[0])
+        else None
+    )
+
     most_volatile = volatility.iloc[0].to_dict() if not volatility.empty else {"district": "N/A", "std_dev": 0.0}
     return {
         "data_mode": data_mode,
@@ -146,7 +337,14 @@ def build_kpis(total_basket: pd.DataFrame, volatility: pd.DataFrame, config: dic
         "latest_focus_cost_rm": round(latest_focus_cost, 2),
         "latest_focus_burden_pct": round(latest_focus_burden, 2),
         "focus_district_12m_change_pct": focus_change,
-        "reference_income_rm": float(income_rm),
+        "latest_focus_state": latest_focus_state,
+        "reference_income_rm": round(reference_income_rm, 2),
+        "reference_income_year": reference_income_year,
+        "reference_income_method": reference_income_method,
+        "latest_low_income_cpi_month": latest_low_income_cpi_month,
+        "latest_low_income_cpi_index": latest_low_income_cpi_index,
+        "latest_low_income_cpi_yoy_pct": latest_low_income_cpi_yoy_pct,
+        "latest_basket_vs_cpi_gap": latest_basket_vs_cpi_gap,
         "highest_pressure_state": latest_pressure_state,
         "highest_pressure_state_burden_pct": latest_pressure_value,
         "most_volatile_district": most_volatile.get("district", "N/A"),
@@ -158,6 +356,7 @@ def build_insights(
     item_monthly: pd.DataFrame,
     total_basket: pd.DataFrame,
     inflation: pd.DataFrame,
+    basket_vs_cpi: pd.DataFrame,
     gap: pd.DataFrame,
     ramadan: pd.DataFrame,
     kpis: dict,
@@ -189,14 +388,34 @@ def build_insights(
     top_state_burden = round(float(latest_state.iloc[0]), 2) if not latest_state.empty else 0.0
 
     top_item = latest_item.iloc[0].to_dict() if not latest_item.empty else {"item": "N/A", "monthly_change_pct": 0.0}
+    income_year = kpis.get("reference_income_year")
+    income_year_text = f" (rujukan gaji {income_year})" if income_year else ""
+    latest_cpi = {}
+    if not basket_vs_cpi.empty:
+        latest_cpi_rows = basket_vs_cpi[basket_vs_cpi["low_income_cpi_index"].notna()].sort_values("bulan")
+        if not latest_cpi_rows.empty:
+            latest_cpi = latest_cpi_rows.iloc[-1].to_dict()
+    cpi_detail = "CPI Low-Income keseluruhan belum tersedia untuk bulan ini."
+    if latest_cpi and pd.notna(latest_cpi.get("low_income_cpi_rebased")):
+        cpi_gap = float(latest_cpi["basket_vs_cpi_gap"])
+        cpi_direction = "lebih pantas" if cpi_gap > 0 else "lebih perlahan"
+        cpi_month = latest_cpi.get("bulan", latest_month)
+        cpi_detail = (
+            f"Pada {cpi_month}, indeks bakul bergerak {abs(cpi_gap):.2f} mata {cpi_direction} "
+            f"berbanding CPI Low-Income keseluruhan (rebase=100)."
+        )
     return [
         {
             "title": "Beban gaji",
             "detail": (
                 f"Kos bakul {kpis['latest_focus_district']} pada {latest_month} ialah "
                 f"RM{kpis['latest_focus_cost_rm']:.2f}, bersamaan {kpis['latest_focus_burden_pct']:.2f}% "
-                f"daripada pendapatan rujukan RM{kpis['reference_income_rm']:.0f}."
+                f"daripada pendapatan rujukan negeri RM{kpis['reference_income_rm']:.0f}{income_year_text}."
             ),
+        },
+        {
+            "title": "Rujukan CPI B40",
+            "detail": cpi_detail,
         },
         {
             "title": "Negeri paling tertekan",
@@ -221,6 +440,7 @@ def save_figures(
     item_monthly: pd.DataFrame,
     total_basket: pd.DataFrame,
     inflation: pd.DataFrame,
+    basket_vs_cpi: pd.DataFrame,
     gap: pd.DataFrame,
     ramadan: pd.DataFrame,
     figures_dir: Path,
@@ -285,6 +505,26 @@ def save_figures(
             figures_dir / "05_kesan_ramadan.png",
         ),
     ]
+
+    if not basket_vs_cpi.empty and basket_vs_cpi["low_income_cpi_rebased"].notna().any():
+        figures.append(
+            (
+                px.line(
+                    basket_vs_cpi.melt(
+                        id_vars="bulan",
+                        value_vars=["basket_index", "low_income_cpi_rebased"],
+                        var_name="series",
+                        value_name="index_value",
+                    ),
+                    x="bulan",
+                    y="index_value",
+                    color="series",
+                    markers=True,
+                    title="Indeks Bakul vs CPI Low-Income (Rebase=100)",
+                ),
+                figures_dir / "06_bakul_vs_cpi_lowincome.png",
+            )
+        )
 
     for figure, destination in figures:
         figure.update_layout(template="plotly_white")
@@ -355,19 +595,24 @@ def run_analysis(data_mode: str = "real") -> None:
     ensure_directories(paths["processed_dir"], paths["figures_dir"])
 
     clean = pd.read_parquet(paths["clean_parquet"])
-    income_rm = float(config["analysis"]["household_monthly_income_rm"])
+    fallback_income_rm = float(config["analysis"]["household_monthly_income_rm"])
+    cpi_low_income = load_cpi_low_income(paths["cpi_low_income_parquet"], month_range(config))
+    wages = load_state_wages(paths["wages_median_csv"])
 
     item_monthly = build_monthly_item_basket(clean, config)
-    total_basket = build_total_basket(item_monthly, income_rm)
+    total_basket = build_total_basket(item_monthly, wages, fallback_income_rm)
+    basket_vs_cpi = build_basket_vs_cpi_table(total_basket, cpi_low_income)
     inflation = build_inflation_table(item_monthly)
     volatility = build_volatility_table(total_basket)
     gap = build_gap_table(total_basket)
     ramadan = build_ramadan_table(total_basket, config)
-    kpis = build_kpis(total_basket, volatility, config, data_mode)
-    insights = build_insights(item_monthly, total_basket, inflation, gap, ramadan, kpis)
+    kpis = build_kpis(total_basket, volatility, basket_vs_cpi, config, data_mode)
+    insights = build_insights(item_monthly, total_basket, inflation, basket_vs_cpi, gap, ramadan, kpis)
 
     item_monthly.to_csv(paths["basket_item_csv"], index=False)
     total_basket.to_csv(paths["basket_cost_csv"], index=False)
+    cpi_low_income.to_csv(paths["cpi_low_income_csv"], index=False)
+    basket_vs_cpi.to_csv(paths["basket_vs_cpi_csv"], index=False)
     inflation.to_csv(paths["inflation_csv"], index=False)
     volatility.to_csv(paths["volatility_csv"], index=False)
     gap.to_csv(paths["gap_csv"], index=False)
@@ -377,9 +622,11 @@ def run_analysis(data_mode: str = "real") -> None:
 
     source_metadata = read_json(paths["source_json"], default={})
     source_metadata["data_mode"] = data_mode
+    source_metadata["cpi_low_income_available"] = not cpi_low_income.empty
+    source_metadata["wages_reference_available"] = not wages.empty
     write_json(paths["source_json"], source_metadata)
 
-    save_figures(item_monthly, total_basket, inflation, gap, ramadan, paths["figures_dir"])
+    save_figures(item_monthly, total_basket, inflation, basket_vs_cpi, gap, ramadan, paths["figures_dir"])
     print("Analysis outputs saved.")
 
 

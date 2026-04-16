@@ -1,0 +1,256 @@
+state,year,median_monthly_wage_rm
+Johor,2010,1500.0
+Johor,2011,1520.0
+Johor,2012,1695.0
+Johor,2013,1700.0
+Johor,2014,2000.0
+Johor,2015,2200.0
+Johor,2016,2200.0
+Johor,2017,2250.0
+Johor,2018,2418.0
+Johor,2019,2512.0
+Johor,2020,2076.0
+Johor,2021,2191.0
+Johor,2022,2216.0
+Johor,2023,2450.0
+Johor,2024,2582.0
+Kedah,2010,1060.0
+Kedah,2011,1190.0
+Kedah,2012,1150.0
+Kedah,2013,1200.0
+Kedah,2014,1300.0
+Kedah,2015,1400.0
+Kedah,2016,1510.0
+Kedah,2017,1650.0
+Kedah,2018,1703.0
+Kedah,2019,1748.0
+Kedah,2020,1509.0
+Kedah,2021,1621.0
+Kedah,2022,1797.0
+Kedah,2023,1885.0
+Kedah,2024,2051.0
+Kelantan,2010,1000.0
+Kelantan,2011,1000.0
+Kelantan,2012,1000.0
+Kelantan,2013,1000.0
+Kelantan,2014,1040.0
+Kelantan,2015,1200.0
+Kelantan,2016,1345.0
+Kelantan,2017,1500.0
+Kelantan,2018,1604.0
+Kelantan,2019,1639.0
+Kelantan,2020,1390.0
+Kelantan,2021,1568.0
+Kelantan,2022,1635.0
+Kelantan,2023,1750.0
+Kelantan,2024,1914.0
+Malaysia,2010,1500.0
+Malaysia,2011,1500.0
+Malaysia,2012,1566.0
+Malaysia,2013,1700.0
+Malaysia,2014,1800.0
+Malaysia,2015,1942.0
+Malaysia,2016,2000.0
+Malaysia,2017,2160.0
+Malaysia,2018,2308.0
+Malaysia,2019,2442.0
+Malaysia,2020,2076.0
+Malaysia,2021,2256.0
+Malaysia,2022,2429.0
+Malaysia,2023,2602.0
+Malaysia,2024,2793.0
+Melaka,2010,1300.0
+Melaka,2011,1350.0
+Melaka,2012,1440.0
+Melaka,2013,1580.0
+Melaka,2014,1660.0
+Melaka,2015,1600.0
+Melaka,2016,1760.0
+Melaka,2017,2145.0
+Melaka,2018,2332.0
+Melaka,2019,2415.0
+Melaka,2020,2130.0
+Melaka,2021,2164.0
+Melaka,2022,2280.0
+Melaka,2023,2360.0
+Melaka,2024,2528.0
+Negeri Sembilan,2010,1500.0
+Negeri Sembilan,2011,1500.0
+Negeri Sembilan,2012,1500.0
+Negeri Sembilan,2013,1800.0
+Negeri Sembilan,2014,1800.0
+Negeri Sembilan,2015,1950.0
+Negeri Sembilan,2016,2060.0
+Negeri Sembilan,2017,2170.0
+Negeri Sembilan,2018,2348.0
+Negeri Sembilan,2019,2433.0
+Negeri Sembilan,2020,2011.0
+Negeri Sembilan,2021,2321.0
+Negeri Sembilan,2022,2334.0
+Negeri Sembilan,2023,2361.0
+Negeri Sembilan,2024,2503.0
+Pahang,2010,1341.0
+Pahang,2011,1380.0
+Pahang,2012,1327.0
+Pahang,2013,1500.0
+Pahang,2014,1585.0
+Pahang,2015,1620.0
+Pahang,2016,1650.0
+Pahang,2017,1870.0
+Pahang,2018,2111.0
+Pahang,2019,2225.0
+Pahang,2020,1775.0
+Pahang,2021,1897.0
+Pahang,2022,2013.0
+Pahang,2023,2276.0
+Pahang,2024,2491.0
+Perak,2010,1200.0
+Perak,2011,1200.0
+Perak,2012,1300.0
+Perak,2013,1300.0
+Perak,2014,1441.0
+Perak,2015,1500.0
+Perak,2016,1650.0
+Perak,2017,1700.0
+Perak,2018,1775.0
+Perak,2019,1858.0
+Perak,2020,1666.0
+Perak,2021,1898.0
+Perak,2022,1901.0
+Perak,2023,2045.0
+Perak,2024,2050.0
+Perlis,2010,1200.0
+Perlis,2011,1200.0
+Perlis,2012,1050.0
+Perlis,2013,1000.0
+Perlis,2014,1350.0
+Perlis,2015,1495.0
+Perlis,2016,1630.0
+Perlis,2017,1800.0
+Perlis,2018,1989.0
+Perlis,2019,2010.0
+Perlis,2020,1541.0
+Perlis,2021,1713.0
+Perlis,2022,1781.0
+Perlis,2023,1820.0
+Perlis,2024,2038.0
+Pulau Pinang,2010,1500.0
+Pulau Pinang,2011,1500.0
+Pulau Pinang,2012,1515.0
+Pulau Pinang,2013,1631.0
+Pulau Pinang,2014,1800.0
+Pulau Pinang,2015,1900.0
+Pulau Pinang,2016,2000.0
+Pulau Pinang,2017,2160.0
+Pulau Pinang,2018,2215.0
+Pulau Pinang,2019,2346.0
+Pulau Pinang,2020,2115.0
+Pulau Pinang,2021,2414.0
+Pulau Pinang,2022,2477.0
+Pulau Pinang,2023,2715.0
+Pulau Pinang,2024,2934.0
+Sabah,2010,1188.0
+Sabah,2011,1200.0
+Sabah,2012,1100.0
+Sabah,2013,1300.0
+Sabah,2014,1400.0
+Sabah,2015,1480.0
+Sabah,2016,1600.0
+Sabah,2017,1763.0
+Sabah,2018,1951.0
+Sabah,2019,1980.0
+Sabah,2020,1705.0
+Sabah,2021,1899.0
+Sabah,2022,2011.0
+Sabah,2023,2059.0
+Sabah,2024,2236.0
+Sarawak,2010,1100.0
+Sarawak,2011,1200.0
+Sarawak,2012,1200.0
+Sarawak,2013,1400.0
+Sarawak,2014,1400.0
+Sarawak,2015,1450.0
+Sarawak,2016,1500.0
+Sarawak,2017,1800.0
+Sarawak,2018,2033.0
+Sarawak,2019,2070.0
+Sarawak,2020,1595.0
+Sarawak,2021,2036.0
+Sarawak,2022,2069.0
+Sarawak,2023,2276.0
+Sarawak,2024,2490.0
+Selangor,2010,1894.0
+Selangor,2011,1800.0
+Selangor,2012,2000.0
+Selangor,2013,2000.0
+Selangor,2014,2200.0
+Selangor,2015,2500.0
+Selangor,2016,2500.0
+Selangor,2017,2580.0
+Selangor,2018,2695.0
+Selangor,2019,2956.0
+Selangor,2020,2713.0
+Selangor,2021,2778.0
+Selangor,2022,3109.0
+Selangor,2023,3235.0
+Selangor,2024,3350.0
+Terengganu,2010,1200.0
+Terengganu,2011,1158.0
+Terengganu,2012,1200.0
+Terengganu,2013,1150.0
+Terengganu,2014,1250.0
+Terengganu,2015,1500.0
+Terengganu,2016,1500.0
+Terengganu,2017,1700.0
+Terengganu,2018,1874.0
+Terengganu,2019,1911.0
+Terengganu,2020,1537.0
+Terengganu,2021,1549.0
+Terengganu,2022,1703.0
+Terengganu,2023,1845.0
+Terengganu,2024,2021.0
+W.P. Kuala Lumpur,2010,1900.0
+W.P. Kuala Lumpur,2011,2000.0
+W.P. Kuala Lumpur,2012,2000.0
+W.P. Kuala Lumpur,2013,2295.0
+W.P. Kuala Lumpur,2014,2500.0
+W.P. Kuala Lumpur,2015,2500.0
+W.P. Kuala Lumpur,2016,2500.0
+W.P. Kuala Lumpur,2017,2650.0
+W.P. Kuala Lumpur,2018,2946.0
+W.P. Kuala Lumpur,2019,3106.0
+W.P. Kuala Lumpur,2020,2995.0
+W.P. Kuala Lumpur,2021,2999.0
+W.P. Kuala Lumpur,2022,3301.0
+W.P. Kuala Lumpur,2023,3469.0
+W.P. Kuala Lumpur,2024,3687.0
+W.P. Labuan,2010,1675.0
+W.P. Labuan,2011,1500.0
+W.P. Labuan,2012,1519.0
+W.P. Labuan,2013,1800.0
+W.P. Labuan,2014,1700.0
+W.P. Labuan,2015,1900.0
+W.P. Labuan,2016,2000.0
+W.P. Labuan,2017,2170.0
+W.P. Labuan,2018,2419.0
+W.P. Labuan,2019,2712.0
+W.P. Labuan,2020,2154.0
+W.P. Labuan,2021,2573.0
+W.P. Labuan,2022,2657.0
+W.P. Labuan,2023,2735.0
+W.P. Labuan,2024,2931.0
+W.P. Putrajaya,2010,2095.0
+W.P. Putrajaya,2011,2320.0
+W.P. Putrajaya,2012,2625.0
+W.P. Putrajaya,2013,2500.0
+W.P. Putrajaya,2014,2695.0
+W.P. Putrajaya,2015,3000.0
+W.P. Putrajaya,2016,3250.0
+W.P. Putrajaya,2017,3500.0
+W.P. Putrajaya,2018,3673.0
+W.P. Putrajaya,2019,3749.0
+W.P. Putrajaya,2020,3682.0
+W.P. Putrajaya,2021,3858.0
+W.P. Putrajaya,2022,3995.0
+W.P. Putrajaya,2023,4443.0
+W.P. Putrajaya,2024,4598.0

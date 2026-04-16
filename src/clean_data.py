@@ -4,7 +4,7 @@ import pandas as pd
 import duckdb
 
 from common import (
-    basket_item_names,
+    basket_lookup_map,
     classify_area_type,
     ensure_directories,
     get_paths,
@@ -14,16 +14,26 @@ from common import (
 
 
 def resolve_selected_items(config: dict, item_lookup: pd.DataFrame) -> pd.DataFrame:
-    configured_names = basket_item_names(config)
+    lookup_map = basket_lookup_map(config)
+    display_name_by_code = {
+        str(item["item_code"]): str(item["name"])
+        for item in config["basket"]["items"]
+        if item.get("item_code")
+    }
     configured_codes = [item.get("item_code") for item in config["basket"]["items"] if item.get("item_code")]
 
-    selected = item_lookup[item_lookup["item"].isin(configured_names)].copy()
+    selected = item_lookup[item_lookup["item"].isin(lookup_map.keys())].copy()
     if configured_codes:
         selected = item_lookup[item_lookup["item_code"].astype(str).isin(configured_codes)].copy()
 
     if selected.empty:
         raise ValueError("No matching basket items found in lookup_item.parquet.")
 
+    selected["item"] = (
+        selected["item_code"].astype(str).map(display_name_by_code)
+        .fillna(selected["item"].map(lookup_map))
+        .fillna(selected["item"])
+    )
     columns = [column for column in ("item_code", "item", "unit", "item_group") if column in selected.columns]
     return selected[columns].drop_duplicates("item_code")
 

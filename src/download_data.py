@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 
 from common import (
-    basket_item_names,
+    basket_lookup_map,
     ensure_directories,
     get_paths,
     load_config,
@@ -41,22 +41,24 @@ def download_lookup(url: str, destination: Path, force: bool) -> pd.DataFrame:
 
 
 def update_item_codes(config: dict, item_lookup: pd.DataFrame) -> None:
-    basket_names = basket_item_names(config)
-    matched = item_lookup[item_lookup["item"].isin(basket_names)].copy()
+    lookup_map = basket_lookup_map(config)
+    matched = item_lookup[item_lookup["item"].isin(lookup_map.keys())].copy()
     matched = matched.sort_values(["item", "item_code"]).drop_duplicates("item")
 
     code_by_name = dict(zip(matched["item"], matched["item_code"]))
     for item in config["basket"]["items"]:
-        discovered = code_by_name.get(item["name"])
+        lookup_name = str(item.get("lookup_name") or item["name"])
+        discovered = code_by_name.get(lookup_name)
         if discovered is not None:
             item["item_code"] = str(discovered)
 
     save_config(config)
-    matched[["item", "item_code"]].to_csv(
+    matched["basket_item_name"] = matched["item"].map(lookup_map)
+    matched[["basket_item_name", "item", "item_code"]].to_csv(
         get_paths(config)["item_catalogue_csv"],
         index=False,
     )
-    unresolved = [name for name in basket_names if name not in code_by_name]
+    unresolved = [display_name for lookup_name, display_name in lookup_map.items() if lookup_name not in code_by_name]
     if unresolved:
         print(f"Warning: item codes not found for {', '.join(unresolved)}")
 
@@ -74,7 +76,13 @@ def main() -> None:
 
     config = load_config()
     paths = get_paths(config)
-    ensure_directories(paths["raw_dir"], paths["lookup_dir"], paths["processed_dir"])
+    ensure_directories(
+        paths["raw_dir"],
+        paths["lookup_dir"],
+        paths["processed_dir"],
+        paths["cpi_dir"],
+        paths["wages_dir"],
+    )
 
     months = month_range(config)
     url_template = config["data_sources"]["pricecatcher_url_template"]
@@ -96,6 +104,14 @@ def main() -> None:
         paths["lookup_dir"] / "lookup_premise.parquet",
         args.force,
     )
+
+    cpi_parquet_url = config["data_sources"].get("cpi_low_income_parquet_url")
+    if cpi_parquet_url:
+        download_lookup(
+            cpi_parquet_url,
+            paths["cpi_low_income_parquet"],
+            args.force,
+        )
 
     update_item_codes(config, lookup_item)
     print("Download step complete.")

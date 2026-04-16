@@ -36,10 +36,14 @@ def get_paths(config: dict[str, Any]) -> dict[str, Path]:
         "figures_dir": resolve_path(paths["figures_dir"]),
         "report_pdf": resolve_path(paths["report_pdf"]),
     }
-    resolved["raw_combined"] = resolved["raw_dir"] / "pricecatcher_12bulan.parquet"
-    resolved["clean_parquet"] = resolved["processed_dir"] / "pricecatcher_b40_12bulan.parquet"
+    resolved["cpi_dir"] = resolved["raw_dir"] / "cpi"
+    resolved["wages_dir"] = resolved["raw_dir"] / "wages"
+    resolved["raw_combined"] = resolved["raw_dir"] / "pricecatcher_selected_range.parquet"
+    resolved["clean_parquet"] = resolved["processed_dir"] / "pricecatcher_b40_selected_range.parquet"
     resolved["basket_cost_csv"] = resolved["processed_dir"] / "basket_cost.csv"
     resolved["basket_item_csv"] = resolved["processed_dir"] / "basket_item_monthly.csv"
+    resolved["cpi_low_income_csv"] = resolved["processed_dir"] / "cpi_low_income.csv"
+    resolved["basket_vs_cpi_csv"] = resolved["processed_dir"] / "basket_vs_cpi.csv"
     resolved["inflation_csv"] = resolved["processed_dir"] / "inflation_by_item.csv"
     resolved["volatility_csv"] = resolved["processed_dir"] / "volatility.csv"
     resolved["gap_csv"] = resolved["processed_dir"] / "urban_rural_gap.csv"
@@ -48,6 +52,8 @@ def get_paths(config: dict[str, Any]) -> dict[str, Path]:
     resolved["insights_json"] = resolved["processed_dir"] / "insights.json"
     resolved["source_json"] = resolved["processed_dir"] / "source_metadata.json"
     resolved["item_catalogue_csv"] = resolved["processed_dir"] / "basket_item_codes.csv"
+    resolved["cpi_low_income_parquet"] = resolved["cpi_dir"] / "cpi_2d_lowincome.parquet"
+    resolved["wages_median_csv"] = resolved["wages_dir"] / "salaries_wages_state_median_2010_2024.csv"
     return resolved
 
 
@@ -72,6 +78,17 @@ def basket_items(config: dict[str, Any]) -> list[dict[str, Any]]:
 
 def basket_item_names(config: dict[str, Any]) -> list[str]:
     return [item["name"] for item in basket_items(config)]
+
+
+def basket_lookup_names(config: dict[str, Any]) -> list[str]:
+    return [str(item.get("lookup_name") or item["name"]) for item in basket_items(config)]
+
+
+def basket_lookup_map(config: dict[str, Any]) -> dict[str, str]:
+    return {
+        str(item.get("lookup_name") or item["name"]): str(item["name"])
+        for item in basket_items(config)
+    }
 
 
 def basket_quantities(config: dict[str, Any]) -> dict[str, float]:

@@ -24,12 +24,21 @@ DISTRICTS = [
 ]
 
 BASE_PRICES = {
-    "Beras Putih Super Tempatan": 3.45,
-    "Ayam Proses Standard": 9.20,
-    "Telur Ayam Gred A": 5.15,
-    "Minyak Masak": 7.30,
-    "Gula Putih": 2.85,
-    "Tepung Gandum": 2.40,
+    "Beras putih": 32.00,
+    "Ayam": 10.20,
+    "Telur": 13.50,
+    "Minyak masak": 3.30,
+    "Gula": 2.90,
+    "Tepung": 2.60,
+    "Susu pekat": 4.30,
+    "Kicap": 4.50,
+    "Bawang": 4.80,
+    "Cili": 13.50,
+    "Ikan kembung": 17.00,
+    "Sayur sawi": 4.20,
+    "Roti": 3.40,
+    "Mee segera": 9.20,
+    "Sabun": 13.80,
 }
 
 
