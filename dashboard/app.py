@@ -76,6 +76,14 @@ def inject_styles() -> None:
         .insight-title, .method-title { color:var(--navy); font-size:1.1rem; font-weight:800; line-height:1.32; margin-bottom:.7rem; }
         .method-step { color:#8c9bb3; letter-spacing:.16em; text-transform:uppercase; font-size:.76rem; font-weight:800; margin-bottom:.65rem; }
         .method-code { margin-top:.8rem; background:#f5f8fc; border:1px solid var(--line); border-radius:14px; padding:.75rem .85rem; color:#4e5d75; font-size:.84rem; line-height:1.45; }
+        .section-break { height:1.35rem; margin:.15rem 0 .5rem; position:relative; }
+        .section-break::after { content:""; position:absolute; left:0; right:0; top:50%; height:1px; background:linear-gradient(90deg, rgba(23,35,62,0), rgba(23,35,62,.14), rgba(34,184,201,.14), rgba(23,35,62,0)); }
+        .rank-card { padding:.9rem 1rem; border-radius:18px; background:rgba(255,255,255,.8); border:1px solid var(--line); margin-top:.75rem; }
+        .rank-top { display:flex; justify-content:space-between; align-items:center; gap:.75rem; margin-bottom:.45rem; }
+        .rank-name { color:var(--navy); font-size:1rem; font-weight:800; }
+        .rank-badge { padding:.28rem .6rem; border-radius:999px; background:#eef7ff; color:#2d5b87; font-size:.74rem; font-weight:800; }
+        .rank-metric { font-family:"Space Grotesk","Manrope",sans-serif; font-size:1.9rem; line-height:1; color:var(--navy); margin-bottom:.35rem; }
+        .rank-copy { color:var(--muted); font-size:.88rem; line-height:1.5; }
         .custom-table { width:100%; border-collapse:collapse; margin-top:.2rem; }
         .custom-table thead th { text-align:left; color:#7f8da8; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; font-weight:800; padding:0 0 .8rem; border-bottom:1px solid var(--line); }
         .custom-table tbody td { padding:.9rem 0; border-bottom:1px solid rgba(229,235,244,.72); color:var(--navy); font-size:.95rem; vertical-align:middle; }
@@ -86,8 +94,14 @@ def inject_styles() -> None:
         .delta { display:inline-flex; align-items:center; justify-content:center; padding:.3rem .65rem; border-radius:999px; font-size:.8rem; font-weight:800; }
         .delta-pos { background:#ecfdf5; color:#0f9d63; } .delta-neg { background:#fff1f3; color:#e11d48; } .delta-neutral { background:#f1f5f9; color:#64748b; }
         div[data-baseweb="select"] > div { border-radius:16px !important; border:1px solid var(--line) !important; min-height:3rem !important; background:rgba(255,255,255,.9) !important; box-shadow:none !important; }
+        div[data-testid="stPopover"] > div > button { width:100%; min-height:3.25rem; border-radius:18px; border:1px solid var(--line); background:rgba(255,255,255,.9); color:var(--navy); font-weight:700; font-size:1rem; justify-content:space-between; padding:.35rem 1rem; box-shadow:none; }
+        div[data-testid="stPopover"] > div > button:hover { border-color:#cfd9e8; background:#ffffff; color:var(--navy); }
+        div[data-testid="stPopover"] > div > button:focus { box-shadow:0 0 0 1px rgba(34,184,201,.28); border-color:rgba(34,184,201,.55); }
+        div[data-testid="stPopover"] div[role="dialog"] { border-radius:18px; border:1px solid var(--line); background:rgba(255,255,255,.98); box-shadow:var(--shadow); }
+        div[data-testid="stPopover"] div[role="dialog"] [role="radiogroup"] { gap:.3rem; }
         [data-testid="stExpander"] details { border-radius:20px; border:1px solid var(--line); background:rgba(255,255,255,.78); }
         [data-testid="stExpander"] summary { font-weight:800; color:var(--navy); }
+        div[data-testid="stDataFrame"] { border:1px solid var(--line); border-radius:18px; overflow:hidden; background:rgba(255,255,255,.78); }
         </style>
         """,
         unsafe_allow_html=True,
@@ -200,30 +214,56 @@ def build_item_snapshot(district_items: pd.DataFrame, selected_month: str, lates
     return current.sort_values("cost_item", ascending=False).reset_index(drop=True)
 
 
-def build_item_table_html(item_snapshot: pd.DataFrame) -> str:
-    rows = []
-    for row in item_snapshot.itertuples():
-        yoy = getattr(row, "yoy_pct")
-        if pd.isna(yoy):
-            delta_class, delta_text = "delta-neutral", "Tiada YoY"
-        elif float(yoy) >= 0:
-            delta_class, delta_text = "delta-pos", f"+{float(yoy):.1f}%"
-        else:
-            delta_class, delta_text = "delta-neg", f"{float(yoy):.1f}%"
-        rows.append(
-            f"""
-            <tr>
-              <td><div class="item-cell"><span class="item-pill">{html.escape(item_abbreviation(str(row.item)))}</span><div><div class="item-name">{html.escape(str(row.item))}</div><div class="item-meta">{float(row.qty):.0f} unit basket | {int(row.sampel_harga)} sampel harga</div></div></div></td>
-              <td>{format_money(float(row.harga_purata))}</td>
-              <td>{format_money(float(row.cost_item))}</td>
-              <td><span class="delta {delta_class}">{html.escape(delta_text)}</span></td>
-              <td>{float(row.share_pct):.1f}%</td>
-            </tr>
-            """
+def format_delta(value: float) -> str:
+    if pd.isna(value):
+        return "Tiada YoY"
+    sign = "+" if float(value) > 0 else ""
+    return f"{sign}{float(value):.1f}%"
+
+
+def build_item_display_table(item_snapshot: pd.DataFrame) -> pd.DataFrame:
+    if item_snapshot.empty:
+        return pd.DataFrame(columns=["Item", "Harga Purata", "Kos Basket", "Perubahan YoY", "Share", "Qty Basket", "Sampel Harga"])
+
+    display = item_snapshot.copy()
+    display["Harga Purata"] = display["harga_purata"].apply(lambda value: format_money(float(value)) if pd.notna(value) else "-")
+    display["Kos Basket"] = display["cost_item"].apply(lambda value: format_money(float(value)) if pd.notna(value) else "-")
+    display["Perubahan YoY"] = display["yoy_pct"].apply(format_delta)
+    display["Share"] = display["share_pct"].apply(lambda value: f"{float(value):.1f}%" if pd.notna(value) else "-")
+    display["Qty Basket"] = display["qty"].apply(lambda value: f"{float(value):g}" if pd.notna(value) else "-")
+    display["Sampel Harga"] = display["sampel_harga"].fillna(0).astype(int)
+    display = display.rename(columns={"item": "Item"})
+    return display[["Item", "Harga Purata", "Kos Basket", "Perubahan YoY", "Share", "Qty Basket", "Sampel Harga"]]
+
+
+def render_section_break() -> None:
+    st.markdown('<div class="section-break"></div>', unsafe_allow_html=True)
+
+
+def render_picker(label: str, options: list[str], state_key: str, format_func=lambda value: value) -> str:
+    if not options:
+        return ""
+
+    radio_key = f"{state_key}_radio"
+    current_value = st.session_state.get(state_key)
+    if current_value not in options:
+        st.session_state[state_key] = options[0]
+    if radio_key in st.session_state and st.session_state[radio_key] not in options:
+        del st.session_state[radio_key]
+
+    current_value = st.session_state[state_key]
+    st.markdown(f'<div class="label">{html.escape(label)}</div>', unsafe_allow_html=True)
+    with st.popover(f"{format_func(current_value)}  v", use_container_width=True):
+        choice = st.radio(
+            label,
+            options,
+            index=options.index(current_value),
+            format_func=format_func,
+            key=radio_key,
+            label_visibility="collapsed",
         )
-    if not rows:
-        rows.append('<tr><td colspan="5"><div class="snapshot-note">Tiada item snapshot untuk pilihan ini.</div></td></tr>')
-    return f'<table class="custom-table"><thead><tr><th>Item</th><th>Harga Purata</th><th>Kos Basket</th><th>Perubahan YoY</th><th>Share</th></tr></thead><tbody>{"".join(rows)}</tbody></table>'
+        st.session_state[state_key] = choice
+    return st.session_state[state_key]
 
 
 st.set_page_config(page_title="Bakul B40", page_icon=":bar_chart:", layout="wide", initial_sidebar_state="collapsed")
@@ -285,18 +325,19 @@ with hero_right:
 
 filter_cols = st.columns([1.0, 1.15, 1.0, 1.15], gap="small")
 with filter_cols[0]:
-    st.markdown('<div class="label">State</div>', unsafe_allow_html=True)
-    selected_state = st.selectbox("State", states, index=states.index(default_state) if default_state in states else 0, label_visibility="collapsed")
+    if "selected_state" not in st.session_state and default_state in states:
+        st.session_state["selected_state"] = default_state
+    selected_state = render_picker("State", states, "selected_state")
 with filter_cols[1]:
     districts = sorted(basket_cost.loc[basket_cost["state"] == selected_state, "district"].dropna().unique().tolist())
     default_district = kpis.get("latest_focus_district")
-    if default_district not in districts and districts:
-        default_district = districts[0]
-    st.markdown('<div class="label">District</div>', unsafe_allow_html=True)
-    selected_district = st.selectbox("District", districts, index=districts.index(default_district) if default_district in districts else 0, label_visibility="collapsed")
+    if "selected_district" not in st.session_state and default_district in districts:
+        st.session_state["selected_district"] = default_district
+    selected_district = render_picker("District", districts, "selected_district")
 with filter_cols[2]:
-    st.markdown('<div class="label">Month snapshot</div>', unsafe_allow_html=True)
-    selected_month = st.selectbox("Month snapshot", months, index=len(months) - 1, label_visibility="collapsed")
+    if "selected_month" not in st.session_state and months:
+        st.session_state["selected_month"] = months[-1]
+    selected_month = render_picker("Month snapshot", months, "selected_month", format_month_label)
 
 state_df = basket_cost[basket_cost["state"] == selected_state].copy()
 state_district_df = aggregate_district_costs(state_df, ["bulan", "district"])
@@ -318,15 +359,36 @@ if len(district_series) > 1 and float(district_series["cost_item"].iloc[0]) > 0:
     change_pct = (float(district_series["cost_item"].iloc[-1]) - float(district_series["cost_item"].iloc[0])) / float(district_series["cost_item"].iloc[0]) * 100
 
 selected_snapshot = basket_cost[basket_cost["bulan"] == selected_month].copy()
+selected_snapshot_district = aggregate_district_costs(selected_snapshot, ["state", "district"])
+state_burden_summary = (
+    selected_snapshot_district.groupby("state", as_index=False)
+    .agg(
+        avg_burden=("burden_pct", "mean"),
+        avg_cost=("cost_item", "mean"),
+        avg_income=("household_income_rm", "mean"),
+        income_reference_year=("income_reference_year", "max"),
+    )
+    .sort_values("avg_burden", ascending=False)
+)
+
 state_cards = []
-max_burden = float(selected_snapshot.groupby("state")["burden_pct"].mean().max()) if not selected_snapshot.empty else 1.0
+max_burden = float(state_burden_summary["avg_burden"].max()) if not state_burden_summary.empty else 1.0
+hotspot_map: dict[str, dict[str, object]] = {}
+for state_name, group in selected_snapshot_district.groupby("state", dropna=False):
+    hotspot = group.sort_values("burden_pct", ascending=False).iloc[0]
+    hotspot_map[str(state_name)] = {
+        "district": str(hotspot["district"]),
+        "burden_pct": float(hotspot["burden_pct"]),
+    }
+
 for state in states:
-    subset = selected_snapshot[selected_snapshot["state"] == state]
+    subset = state_burden_summary[state_burden_summary["state"] == state]
     if subset.empty:
         continue
-    hotspot = subset.sort_values("burden_pct", ascending=False).iloc[0]
-    avg_burden = float(subset["burden_pct"].mean())
-    avg_cost = float(subset["cost_item"].mean())
+    summary = subset.iloc[0]
+    hotspot = hotspot_map.get(state, {"district": state, "burden_pct": float(summary["avg_burden"])})
+    avg_burden = float(summary["avg_burden"])
+    avg_cost = float(summary["avg_cost"])
     progress = 0 if max_burden <= 0 else avg_burden / max_burden * 100
     state_cards.append((state, str(hotspot["district"]), avg_burden, avg_cost, progress))
 
@@ -335,6 +397,7 @@ for column, card in zip(st.columns(len(state_cards), gap="medium"), state_cards)
     state, hotspot, avg_burden, avg_cost, progress = card
     with column:
         st.markdown(f'<div class="state-card"><div class="state-top"><div class="state-name"><span class="state-dot" style="background:{STATE_COLORS.get(state, "#17233E")};"></span>{html.escape(state)}</div><div class="state-chip">{html.escape(hotspot)}</div></div><div class="state-value">{avg_burden:.1f}%</div><div class="state-copy">Purata burden pada {html.escape(format_month_label(selected_month))}. Purata basket cost negeri ini sekitar <b>{format_money(avg_cost)}</b>.</div><div class="progress"><div class="progress-fill" style="width:{progress:.1f}%"></div></div></div>', unsafe_allow_html=True)
+render_section_break()
 
 st.markdown('<div class="panel"><div class="hero-kicker">Trend utama</div><div class="section-title">Kos basket bulanan mengikut negeri pilihan</div><div class="section-note">Saya tukar chart ini kepada <b>selected district vs state context</b>. Ribbon lembut menunjukkan julat tengah district dalam negeri itu, garis putus-putus menunjukkan purata negeri, dan garis tebal menunjukkan district yang sedang dipilih.</div></div>', unsafe_allow_html=True)
 state_trend = (
@@ -397,6 +460,7 @@ trend_chart.add_trace(
     )
 )
 trend_chart = style_figure(trend_chart, yaxis_title="RM", legend_title="", height=470)
+trend_chart.update_layout(margin={"l": 8, "r": 8, "t": 24, "b": 8})
 st.plotly_chart(trend_chart, use_container_width=True, config={"displayModeBar": False})
 
 for column, note in zip(
@@ -409,45 +473,157 @@ for column, note in zip(
 ):
     with column:
         st.markdown(f'<div class="mini-note">{note}</div>', unsafe_allow_html=True)
+render_section_break()
 
 district_items = item_monthly[(item_monthly["state"] == selected_state) & (item_monthly["district"] == selected_district)].copy()
 district_items = aggregate_district_items(district_items)
 item_snapshot = build_item_snapshot(district_items, selected_month, latest_cost)
 left, right = st.columns([1.22, 1.0], gap="medium")
 with left:
-    st.markdown(f'<div class="panel"><div class="hero-kicker">Komposisi basket</div><div class="section-title">Item terkini untuk {html.escape(selected_district)}</div><div class="section-note">{len(item_snapshot)}/{configured_item_count} item tersedia untuk snapshot {html.escape(format_month_label(selected_month))}. Kolum Perubahan YoY membandingkan harga purata item dengan bulan sama tahun sebelumnya apabila data tersedia.</div>{build_item_table_html(item_snapshot)}</div>', unsafe_allow_html=True)
+    st.markdown(
+        f'<div class="panel"><div class="hero-kicker">Komposisi basket</div><div class="section-title">Item terkini untuk {html.escape(selected_district)}</div><div class="section-note">{len(item_snapshot)}/{configured_item_count} item tersedia untuk snapshot {html.escape(format_month_label(selected_month))}. Saya tukar section ini kepada <b>composition chart + audit table</b> supaya item driver lebih cepat dibaca dan detail YoY masih boleh disemak tanpa HTML custom yang rapuh.</div></div>',
+        unsafe_allow_html=True,
+    )
+    if item_snapshot.empty:
+        st.info("Tiada item snapshot untuk pilihan ini.")
+    else:
+        composition_data = item_snapshot.copy().reset_index(drop=True)
+        composition_data["rank"] = composition_data.index
+        composition_data["yoy_label"] = composition_data["yoy_pct"].apply(format_delta)
+        composition_data["label"] = composition_data["cost_item"].apply(lambda value: format_money(float(value)))
+        composition_data["bar_color"] = composition_data["rank"].map(
+            lambda rank: "#17233E" if rank == 0 else "#2F5B84" if rank == 1 else "#22B8C9" if rank == 2 else "#D7F3F6"
+        )
+        composition_chart_data = composition_data.sort_values("cost_item", ascending=True)
+
+        composition_chart = go.Figure(
+            go.Bar(
+                x=composition_chart_data["cost_item"],
+                y=composition_chart_data["item"],
+                orientation="h",
+                marker={
+                    "color": composition_chart_data["bar_color"],
+                    "line": {"color": "rgba(23,35,62,0.12)", "width": 1},
+                },
+                text=composition_chart_data["label"],
+                textposition="outside",
+                cliponaxis=False,
+                customdata=composition_chart_data[["share_pct", "harga_purata", "yoy_label", "qty", "sampel_harga"]],
+                hovertemplate="<b>%{y}</b><br>Kos Basket: RM %{x:.2f}<br>Share: %{customdata[0]:.1f}%<br>Harga Purata: RM %{customdata[1]:.2f}<br>Perubahan YoY: %{customdata[2]}<br>Qty Basket: %{customdata[3]:g}<br>Sampel Harga: %{customdata[4]}<extra></extra>",
+            )
+        )
+        composition_chart = style_figure(composition_chart, yaxis_title="", height=max(360, 28 * len(composition_chart_data) + 120))
+        composition_chart.update_layout(showlegend=False, margin={"l": 8, "r": 28, "t": 24, "b": 8})
+        composition_chart.update_xaxes(title="Kos Basket (RM)", automargin=True)
+        composition_chart.update_yaxes(categoryorder="array", categoryarray=composition_chart_data["item"].tolist(), automargin=True)
+        st.plotly_chart(composition_chart, use_container_width=True, config={"displayModeBar": False})
+
+        item_display = build_item_display_table(item_snapshot)
+        st.dataframe(
+            item_display,
+            use_container_width=True,
+            hide_index=True,
+            height=min(520, 42 + len(item_display) * 36),
+        )
 with right:
-    state_snapshot = selected_snapshot.groupby("state", as_index=False)["burden_pct"].mean().sort_values("burden_pct", ascending=False)
-    burden_chart = px.bar(state_snapshot, x="state", y="burden_pct", color="state", title=f"Beban gaji mengikut negeri ({format_month_label(selected_month)})", color_discrete_map=STATE_COLORS)
-    burden_chart = style_figure(burden_chart, yaxis_title="%", height=420)
-    burden_chart.update_layout(showlegend=False)
+    st.markdown(
+        f'<div class="panel"><div class="hero-kicker">Beban gaji</div><div class="section-title">Ranking negeri untuk snapshot semasa</div><div class="section-note">Saya ubah layout ini daripada <b>vertical bar chart biasa</b> kepada <b>ranked horizontal view</b> dengan summary cards supaya audience boleh terus nampak negeri mana paling tertekan, berapa purata basket cost, dan district hotspot untuk bulan semasa.</div></div>',
+        unsafe_allow_html=True,
+    )
+    burden_chart = go.Figure(
+        go.Bar(
+            x=state_burden_summary["avg_burden"],
+            y=state_burden_summary["state"],
+            orientation="h",
+            marker={
+                "color": [STATE_COLORS.get(state, "#17233E") for state in state_burden_summary["state"]],
+                "line": {"color": "rgba(23,35,62,0.14)", "width": 1},
+            },
+            text=state_burden_summary["avg_burden"].map(lambda value: f"{float(value):.2f}%"),
+            textposition="outside",
+            cliponaxis=False,
+            customdata=state_burden_summary[["avg_cost", "avg_income", "income_reference_year"]],
+            hovertemplate="<b>%{y}</b><br>Purata burden: %{x:.2f}%<br>Purata basket cost: RM %{customdata[0]:.2f}<br>Income reference: RM %{customdata[1]:.0f} (%{customdata[2]})<extra></extra>",
+        )
+    )
+    burden_chart = style_figure(burden_chart, yaxis_title="", height=360)
+    burden_chart.update_layout(showlegend=False, margin={"l": 8, "r": 32, "t": 24, "b": 8})
+    burden_chart.update_xaxes(title="Purata Beban Pendapatan (%)", automargin=True)
+    burden_chart.update_yaxes(categoryorder="array", categoryarray=state_burden_summary["state"].tolist()[::-1], automargin=True)
     st.plotly_chart(burden_chart, use_container_width=True, config={"displayModeBar": False})
+    for row in state_burden_summary.itertuples():
+        hotspot = hotspot_map.get(str(row.state), {"district": "-", "burden_pct": float(row.avg_burden)})
+        st.markdown(
+            f'<div class="rank-card"><div class="rank-top"><div class="rank-name">{html.escape(str(row.state))}</div><div class="rank-badge">Hotspot: {html.escape(str(hotspot["district"]))}</div></div><div class="rank-metric">{float(row.avg_burden):.2f}%</div><div class="rank-copy">Purata basket cost sekitar <b>{format_money(float(row.avg_cost))}</b> dengan income reference <b>RM{float(row.avg_income):,.0f}</b> ({int(row.income_reference_year) if pd.notna(row.income_reference_year) else "N/A"}). District paling berat untuk snapshot ini mencatat <b>{float(hotspot["burden_pct"]):.2f}%</b>.</div></div>',
+            unsafe_allow_html=True,
+        )
+render_section_break()
 
 left, right = st.columns(2, gap="medium")
 with left:
-    inflation_chart = px.line(inflation.sort_values("bulan"), x="bulan", y="price_index", color="item", markers=True, title="Indeks harga item asas", color_discrete_sequence=ITEM_COLORS)
-    inflation_chart = style_figure(inflation_chart, yaxis_title="Index", legend_title="Item", height=420)
-    inflation_chart.update_traces(line={"width": 2.6}, marker={"size": 5.5})
+    st.markdown(
+        '<div class="panel"><div class="hero-kicker">Pergerakan harga</div><div class="section-title">Peta haba harga item asas</div><div class="section-note">Daripada memaksa audience baca 15 garis serentak, saya tukar chart ini kepada <b>heatmap</b> supaya item mana yang semakin panas atau semakin murah boleh ditangkap lebih cepat sepanjang tempoh analisis.</div></div>',
+        unsafe_allow_html=True,
+    )
+    latest_item_index = inflation.sort_values("bulan").groupby("item", as_index=False).tail(1)[["item", "price_index"]].rename(columns={"price_index": "latest_index"})
+    heatmap_frame = inflation.merge(latest_item_index, on="item", how="left")
+    item_order = heatmap_frame.sort_values(["latest_index", "item"], ascending=[False, True])["item"].drop_duplicates().tolist()
+    heatmap_matrix = (
+        heatmap_frame.assign(item=pd.Categorical(heatmap_frame["item"], categories=item_order, ordered=True))
+        .pivot(index="item", columns="bulan", values="price_index")
+        .reindex(item_order)
+    )
+    inflation_chart = go.Figure(
+        go.Heatmap(
+            z=heatmap_matrix.values,
+            x=heatmap_matrix.columns.tolist(),
+            y=heatmap_matrix.index.tolist(),
+            colorscale=[[0.0, "#e7f7fb"], [0.45, "#8ad9e4"], [0.7, "#5d6bff"], [1.0, "#17233E"]],
+            colorbar={"title": "Index"},
+            hovertemplate="<b>%{y}</b><br>Bulan: %{x}<br>Price index: %{z:.1f}<extra></extra>",
+        )
+    )
+    inflation_chart = style_figure(inflation_chart, yaxis_title="", legend_title="", height=460)
+    inflation_chart.update_layout(margin={"l": 8, "r": 8, "t": 24, "b": 8})
+    inflation_chart.update_xaxes(title="")
+    inflation_chart.update_yaxes(title="")
     st.plotly_chart(inflation_chart, use_container_width=True, config={"displayModeBar": False})
 with right:
+    st.markdown(
+        '<div class="panel"><div class="hero-kicker">Benchmark</div><div class="section-title">Indeks basket vs CPI Low-Income</div><div class="section-note">Section ini dikekalkan sebagai dua siri utama sahaja supaya beza arah pergerakan basket berbanding CPI benchmark masih mudah dibaca.</div></div>',
+        unsafe_allow_html=True,
+    )
     if basket_vs_cpi.empty or basket_vs_cpi["low_income_cpi_rebased"].isna().all():
         st.warning("CPI Low-Income comparison is not available yet for this snapshot.")
     else:
-        comparison_chart = px.line(basket_vs_cpi.melt(id_vars="bulan", value_vars=["basket_index", "low_income_cpi_rebased"], var_name="series", value_name="index_value").sort_values("bulan"), x="bulan", y="index_value", color="series", markers=True, title="Indeks basket vs CPI Low-Income", color_discrete_map={"basket_index": "#17233E", "low_income_cpi_rebased": "#22B8C9"})
+        comparison_chart = px.line(basket_vs_cpi.melt(id_vars="bulan", value_vars=["basket_index", "low_income_cpi_rebased"], var_name="series", value_name="index_value").sort_values("bulan"), x="bulan", y="index_value", color="series", markers=True, title="", color_discrete_map={"basket_index": "#17233E", "low_income_cpi_rebased": "#22B8C9"})
         comparison_chart = style_figure(comparison_chart, yaxis_title="Index (Rebase=100)", legend_title="Series", height=420)
         comparison_chart.for_each_trace(lambda trace: trace.update(name="Basket Index" if trace.name == "basket_index" else "CPI Low-Income"))
+        comparison_chart.update_layout(margin={"l": 8, "r": 8, "t": 24, "b": 8})
         st.plotly_chart(comparison_chart, use_container_width=True, config={"displayModeBar": False})
+render_section_break()
 
 left, right = st.columns(2, gap="medium")
 with left:
-    gap_chart = px.bar(gap.sort_values("bulan"), x="bulan", y="avg_cost", color="area_type", barmode="group", title="Jurang kos basket bandar-luar bandar", color_discrete_map={"Urban": "#17233E", "Rural": "#22B8C9", "Unknown": "#CBD5E1"})
+    st.markdown(
+        '<div class="panel"><div class="hero-kicker">Spatial context</div><div class="section-title">Jurang kos basket bandar-luar bandar</div><div class="section-note">Grouped bars dikekalkan di sini kerana cuma dua kategori utama dan pattern perbezaannya masih jelas tanpa menambah noise.</div></div>',
+        unsafe_allow_html=True,
+    )
+    gap_chart = px.bar(gap.sort_values("bulan"), x="bulan", y="avg_cost", color="area_type", barmode="group", title="", color_discrete_map={"Urban": "#17233E", "Rural": "#22B8C9", "Unknown": "#CBD5E1"})
     gap_chart = style_figure(gap_chart, yaxis_title="RM", legend_title="Area type", height=400)
+    gap_chart.update_layout(margin={"l": 8, "r": 8, "t": 24, "b": 8})
     st.plotly_chart(gap_chart, use_container_width=True, config={"displayModeBar": False})
 with right:
-    ramadan_chart = px.bar(ramadan, x="ramadan_flag", y="avg_cost", color="ramadan_flag", title="Purata kos basket Ramadan vs bukan Ramadan", color_discrete_map={"Ramadan": "#22B8C9", "Non-Ramadan": "#17233E"})
+    st.markdown(
+        '<div class="panel"><div class="hero-kicker">Seasonal lens</div><div class="section-title">Purata kos basket Ramadan vs bukan Ramadan</div><div class="section-note">Layout ini sengaja dibiarkan ringkas supaya seasonal difference boleh terus dibandingkan tanpa banyak gangguan visual.</div></div>',
+        unsafe_allow_html=True,
+    )
+    ramadan_chart = px.bar(ramadan, x="ramadan_flag", y="avg_cost", color="ramadan_flag", title="", color_discrete_map={"Ramadan": "#22B8C9", "Non-Ramadan": "#17233E"})
     ramadan_chart = style_figure(ramadan_chart, yaxis_title="RM", height=400)
     ramadan_chart.update_layout(showlegend=False)
+    ramadan_chart.update_layout(margin={"l": 8, "r": 8, "t": 24, "b": 8})
     st.plotly_chart(ramadan_chart, use_container_width=True, config={"displayModeBar": False})
+render_section_break()
 
 st.markdown('<div class="panel"><div class="hero-kicker">Insight utama</div><div class="section-title">Ringkasan cepat untuk pembentangan</div><div class="section-note">Cards ini cuba bawa rasa reference video tadi: cepat dibaca, ada hierarchy yang jelas, dan tak terus lempar pengguna ke lautan chart.</div></div>', unsafe_allow_html=True)
 featured = insights[:3]
@@ -458,6 +634,7 @@ if len(insights) > 3:
     with st.expander("Lihat insight tambahan"):
         for insight in insights[3:]:
             st.markdown(f"- **{insight['title']}**: {insight['detail']}")
+render_section_break()
 
 st.markdown('<div class="panel"><div class="hero-kicker">Metodologi ringkas</div><div class="section-title">Bagaimana dashboard ini dibina</div><div class="section-note">Reference yang you bagi ada satu blok metodologi yang memang membantu. Saya ikut idea itu, tapi disesuaikan dengan pipeline sebenar project ini.</div></div>', unsafe_allow_html=True)
 method_cards = [
